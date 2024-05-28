@@ -1,0 +1,534 @@
+
+
+
+img {
+    max-width:100%;
+    height: auto;
+}
+
+.h1 {
+  color: var(--Primary-Base-Black, #000);
+  text-align: center;
+  font-family: Poppins;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.h2 {
+  color: var(--Primary-Base-Black, #000);
+  text-align: center;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+
+}
+
+.p1 {
+    font-family: helvetica;
+    font-size : 16px;
+}
+
+.p2 {
+    font-family: helvetica;
+    font-size: 12px;
+
+}
+
+
+
+.filterbox {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%; /* Adjust width as needed */
+  max-width: 284px; /* Maximum width for larger screens */
+  margin: 0 auto; /* Center the container */
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for better visualization */
+  background: #fff; /* Optional: Add a background color */
+  border-radius: 8px;
+  background-color: #A34444;
+}
+
+.cardlarge {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%; /* Adjust width as needed */
+  max-width: 795px; /* Maximum width for larger screens */
+  margin: 0 auto; /* Center the container */
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for better visualization */
+  background: #fff; /* Optional: Add a background color */
+  border-radius: 8px;
+  background-color: #A34444;
+}
+
+
+
+.content2 {
+    margin-bottom: 20px;
+    display: flex;
+}
+
+.content3 {
+  margin-top: 20px;
+  display:flex;
+}
+
+
+.cardmedium {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%; /* Adjust width as needed */
+  max-width: 300px; /* Maximum width for larger screens */
+  margin: 0 auto; /* Center the container */
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for better visualization */
+  background: #fff; /* Optional: Add a background color */
+  border-radius: 8px;
+  background-color: #A34444;
+}
+
+.indicatorbox {
+    padding: 15px;
+    background-color:#A34444;
+    border-radius: 12px;
+
+}
+
+.filterbox{
+    background-color:#A34444;
+    border-radius: 24px;
+    height: max-content;
+    padding: 12px;
+}
+.checkbox {
+    display: flex;
+    width: 16px;
+    height: 19.277px;
+    padding-bottom: 3.277px;
+    border-radius: 2px;
+    background: #3A3A3A;
+    margin-inline: 12px;
+    
+
+}
+
+.cardsmall {
+    width: 175.641px;
+    height: 101px;
+    flex-shrink: 0;
+}
+
+
+.filtertype {
+    height: 30px;
+    background: #F00095;
+    text-align: center;
+    font-weight: bold;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    
+}
+
+.mediumbutton {
+    display: flex;
+    width: 138px;
+    padding: 12px var(--numbers-spacing-s, 16px);
+    flex-direction: column;
+    align-items: center;
+    gap: var(--numbers-spacing-xs, 8px);
+    border-radius: var(--numbers-spacing-xs, 8px);
+    background: #A34444;
+}
+
+.header {
+    background-color: #F00095;
+    overflow: hidden;
+    padding: 20px 10px;
+    
+}
+
+.header a {
+    float: left;
+    color: black;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 18px;
+    border-radius: 4px;
+  }
+
+.headerlogo {
+    max-width: 50px; 
+    max-height : 50px;
+
+}
+.header a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+
+.header-right {
+    float: right;
+  }
+
+@media screen and (max-width: 500px){
+    .header a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+    .header-right {
+      float: none;
+    }
+
+}
+
+.container{
+display: flex ;
+align-content: stretch
+}
+
+/* For mobile phones: */
+[class*="col-"] {
+    width: 100%;
+  }
+  
+  @media screen and (max-width: 795px){
+    .col-s-1 {width: 8.33%;}
+    .col-s-2 {width: 16.66%;}
+    .col-s-3 {width: 25%;}
+    .col-s-4 {width: 33.33%;}
+    .col-s-5 {width: 41.66%;}
+    .col-s-6 {width: 50%;}
+    .col-s-7 {width: 58.33%;}
+    .col-s-8 {width: 66.66%;}
+    .col-s-9 {width: 75%;}
+    .col-s-10 {width: 83.33%;}
+    .col-s-11 {width: 91.66%;}
+    .col-s-12 {width: 100%;}
+
+
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+
+    .container{
+        flex-direction: column;
+    }
+  }
+
+
+.sectiontitle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contentinsight {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 117px;
+}
+
+.monthpicker a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+
+.monthpicker a {
+    float: left;
+    color: black;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 18px;
+    border-radius: 4px;
+  }
+
+  .monthpicker {
+    background-color: transparent;
+    overflow: scroll;
+    height: 165px;
+    display: grid block;
+    padding: 20px 10px; }
+
+
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: black; 
+    border-radius: 4px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: grey; 
+  }
+
+
+  /* Customize the label (the container) */
+.containerbox {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 12px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #eee;
+  width: 24px;
+  height: 19.277px;
+  padding-bottom: 3.277px;
+  border-radius: 2px;
+  background: #3A3A3A;
+    
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #F00095;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+
+.p {
+  font-size: 12px;
+  text-align: center;
+  text-wrap: auto;
+}
+
+
+/* Style the container to be responsive */
+.chart-container {
+  position: relative;
+  width: 100%; /* Adjust the width as needed */
+  height: 400px; /* Adjust the height as needed */
+}
+
+/* Optional: style for canvas if needed */
+#salesChart1{
+  width: 100% !important; /* Ensure the canvas takes full width of the container */
+  height: 100% !important; /* Ensure the canvas takes full height of the container */
+}
+
+
+
+.dropdown, .data-type {
+  margin-bottom: 20px;
+}
+
+.hidden {
+  display: none;
+}
+
+.section1 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 90%; /* Adjust width as needed */
+  max-width: 1200px; /* Maximum width for larger screens */
+  max-height: auto;
+  margin: 0 auto; /* Center the container */
+  padding: 20px;
+  gap: 12px;
+  border-radius: 8px;
+}
+
+.section2 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 90%; /* Adjust width as needed */
+  max-width: 300px; /* Maximum width for larger screens */
+  margin: 0 auto; /* Center the container */
+  padding: 20px;
+  gap : 8px;
+  border-radius: 8px; /* Optional: Rounded corners */
+}
+
+.section3 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 90%; /* Adjust width as needed */
+  max-width: 1080px; /* Maximum width for larger screens */
+  margin: 0 auto; /* Center the container */
+  padding: 20px;
+  gap : 8px;
+  border-radius: 8px; /* Optional: Rounded corners */
+}
+
+
+.section4 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 90%; /* Adjust width as needed */
+  max-width: 800px; /* Maximum width for larger screens */
+  max-height: auto;
+  margin: 0 auto; /* Center the container */
+  padding: 20px;
+  gap: 12px;
+  border-radius: 8px;
+}
+
+
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: 10% auto; /* 10% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 90%; /* Full width with some padding */
+  max-width: 1200px; /* Max width for larger screens */
+  overflow-x: auto; /* Enable horizontal scroll if needed */
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Responsive table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  overflow-x: auto;
+  display: block;
+}
+
+table, th, td {
+  border: 1px solid #ddd;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+#pagination-controls {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.pagination-button {
+  padding: 10px;
+  margin: 5px;
+  cursor: pointer;
+  border: 1px solid #888;
+  border-radius: 5px;
+}
+
+.pagination-button:hover {
+  background-color: #ddd;
+}
