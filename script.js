@@ -109,6 +109,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 return result;
             }
 
+
+
+            const monthlySalesByCategory = calculateMonthlySalesByCategory(team22);
+            const monthlySalesByPizza = calculateMonthlySalesByPizza(team22);
+            const monthlySalesBySize = calculateMonthlySalesBySize(team22);
+            const monthlyRevenue = calculateMonthlyRevenue(team22);
+            const monthlyOrders = calculateMonthlyOrders(team22);
+            
+            
             function getUniqueMonths(data) {
                 const uniqueMonths = new Set();
                 data.forEach(order => {
@@ -118,13 +127,29 @@ document.addEventListener('DOMContentLoaded', () => {
                 return Array.from(uniqueMonths);
             }
 
-            const monthlySalesByCategory = calculateMonthlySalesByCategory(team22);
-            const monthlySalesByPizza = calculateMonthlySalesByPizza(team22);
-            const monthlySalesBySize = calculateMonthlySalesBySize(team22);
-            const monthlyRevenue = calculateMonthlyRevenue(team22);
-            const monthlyOrders = calculateMonthlyOrders(team22);
+            // Dapatkan bulan unik dari data
+            let uniqueMonths = getUniqueMonths(team22);
 
-            const uniqueMonths = getUniqueMonths(team22);
+            // Urutan bulan untuk pengurutan
+            const monthOrder = [
+                '01', '02', '03', '04', '05', '06',
+                '07', '08', '09', '10', '11', '12'
+            ];
+
+            // Urutkan bulan sesuai urutan kalender
+            uniqueMonths.sort((a, b) => {
+                const [yearA, monthA] = a.split('-');
+                const [yearB, monthB] = b.split('-');
+                return yearA !== yearB ? yearA - yearB : monthOrder.indexOf(monthA) - monthOrder.indexOf(monthB);
+            });
+
+            // Fungsi untuk mengonversi format YYYY-MM menjadi nama bulan
+            function formatMonth(month) {
+                const [year, monthNum] = month.split('-');
+                const date = new Date(year, monthNum - 1);
+                return date.toLocaleString('default', { month: 'long' });
+            }
+
             const checkboxContainer = document.getElementById('checkboxContainer');
 
             uniqueMonths.forEach(month => {
@@ -135,10 +160,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 const label = document.createElement('label');
                 label.htmlFor = month;
-                label.textContent = month;
+                label.textContent = formatMonth(month); // Menggunakan formatMonth untuk mengubah menjadi nama bulan
 
                 checkboxContainer.appendChild(checkbox);
                 checkboxContainer.appendChild(label);
+                checkboxContainer.appendChild(document.createElement('br')); // Tambahkan <br> untuk baris baru
             });
 
             const ctx1 = document.getElementById('salesChart1').getContext('2d');

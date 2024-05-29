@@ -1,0 +1,134 @@
+<html>
+<!DOCTYPE html>
+<head>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="style.css">
+   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+  <nav class="header">
+    <a href=#default ><img src="assets/team22.png" class="headerlogo"></a>
+      <div class="header-right">
+        <a href="#default"> <h1>Home</h1></a>
+        <a href="#default"> <h1>Insight</h1></a>
+        <a href="#default"> <h1>Recommendation</h1></a>
+        <a href="#default"> <h1>About</h1></a>
+      </div>
+  </nav>
+
+
+  <section class="section1">
+      <div class="section2">
+          <div class="filterbox">
+              <h2>Total Order</h2>
+              <h1>48,620</h1>
+          </div>
+
+          <div class="filterbox">
+              <h2>Total Revenue</h2>
+              <h1>603.8M</h1>
+          </div> 
+
+          <div class="filterbox">
+              <h2>Total Pizza Sold</h2>
+              <h1>49,574</h1>
+          </div>
+
+          <div class="filterbox">
+              <div class="filter-container">
+                  <label>Select Months:</label>
+                  <br>
+                  <div id="checkboxContainer"></div>
+              </div>
+          </div>
+          <button id="openModalBtn" class="btn-masuk">Lihat Tabel</button>
+      </div>
+
+
+      <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Modal Header</h2>
+            <div id="modal-body">
+                <!-- Table will be inserted here -->
+            </div>
+            <div id="pagination-controls">
+                <!-- Pagination controls will be inserted here -->
+            </div>
+        </div>
+    </div>
+
+    <div class="section4">
+        <div class="section4">
+            <div class="cardlarge">
+            <div id="chartContainer2" class="chart-container">
+            <canvas id="salesChart2"></canvas>
+            </div>
+            </div>
+
+            <div class="cardlarge">
+            <div id="chartContainer5" class="chart-container">
+            <canvas id="salesChart5"></canvas>
+            </div>
+            </div>
+
+            <div class="cardlarge">
+            <div id="chartContainer4" class="chart-container">
+            <canvas id="salesChart4"></canvas>
+            </div>
+            </div>
+        </div>
+  
+
+        <div class="section3">
+            <div class="cardmedium">
+                <div id="chartContainer1" class="chart-container">
+                <canvas id="salesChart1"></canvas>
+                </div>
+            </div>
+
+            <div class="cardmedium">
+                <div id="chartContainer3" class="chart-container">
+                <canvas id="salesChart3"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>
+
+  <div class="sectiontitle" style="color: white;">
+    <h1>FINDINGS</h1>
+    <h2>after examining the data, heres our findings</h2>
+  </div>
+  <div class="cardlarge col-s-10 col.12" style="display:grid;max-width: 1161px;margin: auto;align-content:start;">
+    <div>
+      <h1>MONTHLY SALES</h1>
+    </div>
+    <div class="contentinsight col.12 col-s-12">
+      <img src="assets/Group 26.svg" alt="" >
+      <div style="text-align: left;word-wrap: break-word;">
+      <p2>total transaksi tterendah terjadi di bulan September</p2><br>
+      <p2> total transaksi terjadi tertinggi di bulan Juli</p2><br>
+      <p2> Penjualan pizza cenderung lebih tinggi di awal tahun (Januari-April) dan akhir tahun (November-Desember).</p2><br>
+      <p2> Penjualan pizza cenderung lebih rendah di pertengahan tahun (Mei-Oktober).</p2><br>
+      <p2> Total pertumbuhan penjualan yaitu -5.0%</p2><br>
+      <p2> Pertumbuhan transaksi sendiri berkisar di 7.0%</p2><br>
+      <p2>  Target tahun depan minimal 7% = 3403 transaksi</p2><br>
+      </div>
+    <div>
+      
+    </div>
+    
+    </div>
+  </div>
+</div>
+
+
+
+<script src="script.js"></script>
+</body>
+<footer>
+</footer>
+</html>
