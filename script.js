@@ -116,7 +116,46 @@ document.addEventListener('DOMContentLoaded', () => {
             const monthlySalesBySize = calculateMonthlySalesBySize(team22);
             const monthlyRevenue = calculateMonthlyRevenue(team22);
             const monthlyOrders = calculateMonthlyOrders(team22);
+
+
+            function calculateTotalRevenue(data) {
+                const monthlyRevenue = calculateMonthlyRevenue(data);
+                let totalRevenue = 0;
             
+                for (const month in monthlyRevenue) {
+                    totalRevenue += monthlyRevenue[month];
+                }
+            
+                return Math.round(totalRevenue);
+            }
+
+            function calculateTotalOrders(data) {
+                const monthlyOrders = calculateMonthlyOrders(data);
+                let totalOrders = 0;
+            
+                for (const month in monthlyOrders) {
+                    totalOrders += monthlyOrders[month];
+                }
+            
+                return (totalOrders);
+            }
+
+            function calculateTotalRevenue(data) {
+                const monthlyRevenue = calculateMonthlyRevenue(data);
+                let totalRevenue = 0;
+            
+                for (const month in monthlyRevenue) {
+                    totalRevenue += monthlyRevenue[month];
+                }
+            
+                return Math.round(totalRevenue);
+            }
+
+            const totalRevenue = calculateTotalRevenue(data);
+            const totalOrders = calculateTotalOrders(data);
+
+            document.getElementById('total-revenue').innerText = totalRevenue;
+            document.getElementById('total-orders').innerText = totalOrders;
             
             function getUniqueMonths(data) {
                 const uniqueMonths = new Set();
