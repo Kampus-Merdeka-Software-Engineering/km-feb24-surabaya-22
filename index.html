@@ -10,30 +10,39 @@
   <nav class="header">
     <a href=#default ><img src="assets/team22.png" class="headerlogo"></a>
       <div class="header-right">
-        <a href="#default"> <h1>Home</h1></a>
-        <a href="#default"> <h1>Insight</h1></a>
-        <a href="#default"> <h1>Recommendation</h1></a>
-        <a href="#default"> <h1>About</h1></a>
+        <a href="#home"> <h1>Home</h1></a>
+        <a href="#findings"> <h1>Insight</h1></a>
+        <a href="#recomendation"> <h1>Recommendation</h1></a>
+        <a href="#about-us"> <h1>About</h1></a>
       </div>
   </nav>
 
-
+<div class="graphcontent" id="home" >
   <section class="section1">
       <div class="section2">
-          <div class="filterbox">
-              <h2>Total Order</h2>
-              <h1>48,620</h1>
-          </div>
+        <div class="filterbox-type">
+            <img class="imgholder1" src="assets/cart.png">
+            <div class="filterbox">
+                <h2>Total Order</h2>
+                <h1><span id="total-orders"></h1>
+            </div>
+        </div>
 
-          <div class="filterbox">
-              <h2>Total Revenue</h2>
-              <h1>603.8M</h1>
-          </div> 
+        <div class="filterbox-type">
+            <img class="imgholder1" src="assets/Rectangle 30.png">
+            <div class="filterbox">   
+                <h2>Total Revenue</h2>
+                <h1><span id="total-revenue"></span></h1>
+            </div> 
+        </div>
 
-          <div class="filterbox">
-              <h2>Total Pizza Sold</h2>
-              <h1>49,574</h1>
-          </div>
+        <div class="filterbox-type"> 
+            <img class="imgholder1" src="assets/pizza.png">    
+            <div class="filterbox">
+                <h2>Total Pizza Sold</h2>
+                <h1>49,574</h1>
+            </div>
+      </div>
 
           <div class="filterbox">
               <div class="filter-container">
@@ -44,21 +53,6 @@
           </div>
           <button id="openModalBtn" class="btn-masuk">Lihat Tabel</button>
       </div>
-
-
-      <div id="myModal" class="modal">
-        <!-- Modal content -->
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h2>Modal Header</h2>
-            <div id="modal-body">
-                <!-- Table will be inserted here -->
-            </div>
-            <div id="pagination-controls">
-                <!-- Pagination controls will be inserted here -->
-            </div>
-        </div>
-    </div>
 
     <div class="section4">
         <div class="section4">
@@ -96,13 +90,30 @@
             </div>
         </div>
     </div>
+  </div>
+
+
+  <div id="myModal" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Modal Header</h2>
+        <div id="modal-body">
+            <!-- Table will be inserted here -->
+        </div>
+        <div id="pagination-controls">
+            <!-- Pagination controls will be inserted here -->
+        </div>
+    </div>
+</div>
+
   </section>
 
-  <div class="sectiontitle" style="color: white;">
+  <div class="sectiontitle" id="findings" style="color: white;">
     <h1>FINDINGS</h1>
     <h2>after examining the data, heres our findings</h2>
   </div>
-  <div class="cardlarge col-s-10 col.12" style="display:grid;max-width: 1161px;margin: auto;align-content:start;">
+  <div class="cardlarge1 ">
     <div>
       <h1>MONTHLY SALES</h1>
     </div>
@@ -125,7 +136,174 @@
   </div>
 </div>
 
+<div class="sectiontitle" id=recomendation style="color: white;">
+    <h1>Recommendation</h1>
+    <h2>after examining the insight, heres our Recommendation</h2>
+  </div>
+  <div class="cardlarge1 ">
+    <div>
+      <h1>Marketing</h1>
+    </div>
+    <div class="contentinsight col.12 col-s-12">
+      <img src="assets/Group 26.svg" alt="" >
+      <div style="text-align: left;word-wrap: break-word;">
+      <p2>total transaksi tterendah terjadi di bulan September</p2><br>
+      <p2> total transaksi terjadi tertinggi di bulan Juli</p2><br>
+      <p2> Penjualan pizza cenderung lebih tinggi di awal tahun (Januari-April) dan akhir tahun (November-Desember).</p2><br>
+      <p2> Penjualan pizza cenderung lebih rendah di pertengahan tahun (Mei-Oktober).</p2><br>
+      <p2> Total pertumbuhan penjualan yaitu -5.0%</p2><br>
+      <p2> Pertumbuhan transaksi sendiri berkisar di 7.0%</p2><br>
+      <p2>  Target tahun depan minimal 7% = 3403 transaksi</p2><br>
+      </div>
+    <div>
+      
+    </div>
+    
+    </div>
+  </div>
+</div>
 
+<section class="about-us" id="about-us">
+        <div class="center">
+            <h1>Surabaya 22 Team</h1>
+        </div>
+
+        <div class="team-content">
+            <div class="box">
+                <img src="Ihsan.png" alt="">
+                <h3>Ihsan</h3>
+                <h5>IPB University</h5>
+                <div class="icons">
+                    <a href="https://www.linkedin.com/in/muhammad-ihsan-taqiyuddin" target="_blank"><i class="ri-linkedin-box-fill"></i></a>
+                    <a href="ihsantaqiyuddin68@gmail.com" target="_blank"><i class="ri-mail-fill"></i></a>
+                    <a href="http://wa.me/62081218652732" target="_blank"><i class="ri-whatsapp-line"></i></a>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="Mega.png" alt="">
+                <h3>Mega</h3>
+                <h5>Universitas Jember</h5>
+                <div class="icons">
+                    <a href="https://www.linkedin.com/in/widya-mega-wulandari-7901932b2" target="_blank"><i class="ri-linkedin-box-fill"></i></a>
+                    <a href="widyamegaw@gmail.com"><i class="ri-mail-fill"></i></a>
+                    <a href="http://wa.me/6287704791016" target="_blank"><i class="ri-whatsapp-line"></i></a>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="Isna.png" alt="">
+                <h3>Isna</h3>
+                <h5>Universitas Muhammadiyah Semarang</h5>
+                <div class="icons">
+                    <a href="http://www.linkedin.com/in/isna-shofa-fahradina-20622b222" target="_blank"><i class="ri-linkedin-box-fill"></i></a>
+                    <a href="#"><i class="ri-mail-fill"></i></a>
+                    <a href="http://wa.me/6282243064922" target="_blank"><i class="ri-whatsapp-line"></i></a>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="Deis.png" alt="">
+                <h3>Deis</h3>
+                <h5>Institut Teknologi PLN</h5>
+                <div class="icons">
+                    <a href="http://linkedin.com/in/deis-zadiaqe-94b3512a2" target="_blank"><i class="ri-linkedin-box-fill"></i></a>
+                    <a href="#"><i class="ri-mail-fill"></i></a>
+                    <a href="http://wa.me/6281268685795" target="_blank"><i class="ri-whatsapp-line"></i></a>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="Dinda.png" alt="">
+                <h3>Dinda</h3>
+                <h5>Universitas Indonesia</h5>
+                <div class="icons">
+                    <a href="https://www.linkedin.com/in/dinda-ayudia-larasati" target="_blank"><i class="ri-linkedin-box-fill"></i></a>
+                    <a href="dinda.ayudia.larasati@gmail.com" target="_blank"><i class="ri-mail-fill"></i></a>
+                    <a href="http://wa.me/6281517249754" target="_blank"><i class="ri-whatsapp-line"></i></a>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="Zafira.png" alt="">
+                <h3>Zafira</h3>
+                <h5>Universitas Diponegoro</h5>
+                <div class="icons">
+                    <a href="https://www.linkedin.com/in/zafirajulialisda?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="ri-linkedin-box-fill"></i></a>
+                    <a href="zafirajulialisda1@gmail.com" target="_blank"><i class="ri-mail-fill"></i></a>
+                    <a href="wa.me/62895423126633" target="_blank"><i class="ri-whatsapp-line"></i></a>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="Afifah.png" alt="">
+                <h3>Afifah Fadwa</h3>
+                <h5>Universitas Brawijaya</h5>
+                <div class="icons">
+                    <a href="https://www.linkedin.com/in/afifah-fadwa-6051b1263/" target="_blank"><i class="ri-linkedin-box-fill"></i></a>
+                    <a href="#"><i class="ri-mail-fill"></i></a>
+                    <a href="wa.me/6281282520180" target="_blank"><i class="ri-whatsapp-line"></i></a>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="Zhafran.png" alt="">
+                <h3>Zhafran</h3>
+                <h5>Universitas Terbuka</h5>
+                <div class="icons">
+                    <a href="https://www.linkedin.com/in/zhafran-alfani-suhada" targ><i class="ri-linkedin-box-fill"></i></a>
+                    <a href="zhafranalfani@gmail.com"><i class="ri-mail-fill"></i></a>
+                    <a href="wa.me/6281329481475" target="_blank"><i class="ri-whatsapp-line"></i></a>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="Sendi.png" alt="">
+                <h3>Sendi</h3>
+                <h5>Universitas Islam Riau</h5>
+                <div class="icons">
+                    <a href="https://www.linkedin.com/in/sendi-satria-pangestu-2499472a4/" target="_blank"><i class="ri-linkedin-box-fill"></i></a>
+                    <a href="#"><i class="ri-mail-fill"></i></a>
+                    <a href="wa.me/6289512439274" target="_blank"><i class="ri-whatsapp-line"></i></a>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="Wahyu.png" alt="">
+                <h3>Wahyu</h3>
+                <h5>Universitas Gunadarma</h5>
+                <div class="icons">
+                    <a href="https://www.linkedin.com/in/wahyu-hariyadi-nurdin-60a8ab26a/" target="_blank"><i class="ri-linkedin-box-fill"></i></a>
+                    <a href="wahyunurdin.whn@gmail.com" target="_blank"><i class="ri-mail-fill"></i></a>
+                    <a href="wa.me/6282177416846" target="_blank"><i class="ri-whatsapp-line"></i></a>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="Corelia.png" alt="">
+                <h3>Cornelia</h3>
+                <h5>Institut Teknologi Nasional Malang</h5>
+                <div class="icons">
+                    <a href="https://www.linkedin.com/in/corneliaboro/" target="_blank"><i class="ri-linkedin-box-fill"></i></a>
+                    <a href="cornelialtboro06@gmail.com" target="_blank"><i class="ri-mail-fill"></i></a>
+                    <a href="https://wa.me/6281299026064" target="_blank"><i class="ri-whatsapp-line"></i></a>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="Lucky.png" alt="">
+                <h3>Lucky</h3>
+                <h5>Universitas 17 Agustus 1945 Surabaya</h5>
+                <div class="icons">
+                    <a href="https://www.linkedin.com/in/lucky-andrian-maulana-170113286" target="_blank"><i class="ri-linkedin-box-fill"></i></a>
+                    <a href="luckyandrianmaulana@gmail.com" target="_blank"><i class="ri-mail-fill"></i></a>
+                    <a href="https://wa.me/6281234143869" target="_blank"><i class="ri-whatsapp-line"></i></a>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
 
 <script src="script.js"></script>
 </body>
