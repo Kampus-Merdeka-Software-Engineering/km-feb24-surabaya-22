@@ -70,22 +70,34 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             function calculateMonthlyRevenue(data) {
+                const monthNames = [
+                    "January", "February", "March", "April", "May", "June",
+                    "July", "August", "September", "October", "November", "December"
+                ];
+            
                 const monthlyRevenue = {};
-
+            
                 data.forEach(order => {
                     const { quantity, price, date } = order;
-                    const month = date.slice(0, 7);
+                    const monthIndex = new Date(date).getMonth();
+                    const monthName = monthNames[monthIndex];
                     const revenue = quantity * price;
-
-                    if (!monthlyRevenue[month]) {
-                        monthlyRevenue[month] = 0;
+            
+                    if (!monthlyRevenue[monthName]) {
+                        monthlyRevenue[monthName] = 0;
                     }
-
-                    monthlyRevenue[month] += revenue;
+            
+                    monthlyRevenue[monthName] += revenue;
                 });
-
-                return monthlyRevenue;
+            
+                const result = {};
+                for (const month of monthNames) {
+                    result[month] = monthlyRevenue[month] || 0;
+                }
+            
+                return result;
             }
+            
 
             function calculateMonthlyOrders(data) {
                 const monthNames = [
