@@ -29,9 +29,8 @@
 
 .box{
   padding: 16px;
-  background: #1b1229;
+  background: rgba(227, 227, 227, 0.30);
   border-radius: 15px;
-  transition: all .38s ease;
 }
 
 body {
@@ -616,77 +615,99 @@ html {
 
 /* General footer styling */
 .footer {
-  background-color: #f8f9fa; /* Light gray background */
-  padding: 20px 0; /* Vertical padding */
-  text-align: center; /* Center-align text */
-  width: 100%; /* Full width */
-  border-top: 1px solid #e7e7e7; /* Light border at the top */
+  background-color: #333;
+  padding: 20px 0;
+  text-align: center;
 }
 
-/* Footer content container */
 .footer-content {
-  display: flex; /* Flexbox layout */
-  flex-wrap: wrap; /* Allow wrapping on smaller screens */
-  justify-content: space-between; /* Space out the children evenly */
-  align-items: center; /* Center align vertically */
-  max-width: 1200px; /* Max width for content */
-  margin: 0 auto; /* Center horizontally */
-  padding: 0 20px; /* Horizontal padding */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
-/* Logo container */
-.logo {
-  display: flex; /* Flexbox layout */
-  align-items: center; /* Center align vertically */
-  margin-bottom: 10px; /* Space below the logo */
+.footer .logo {
+  display: flex;
+  align-items: center;
 }
 
-/* Logo image */
-.logo img {
-  height: 50px; /* Set height of logo image */
-  margin-right: 10px; /* Space between logo and text */
+.footer .logo .btn {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: white;
 }
 
-/* Logo text */
-.logo h3 {
-  margin: 0; /* Remove default margin */
-  font-size: 1.5em; /* Set font size */
+.footer .logo img {
+  height: 50px;
+  margin-right: 10px;
 }
 
-/* Action buttons container */
-.action-buttons {
-  display: flex; /* Flexbox layout */
-  flex-wrap: wrap; /* Allow wrapping on smaller screens */
-  justify-content: center; /* Center horizontally */
+.footer .action-buttons {
+  display: flex;
+  gap: 15px;
 }
 
-/* Individual buttons */
-.action-buttons .btn {
-  margin: 5px 10px; /* Space around buttons */
-  text-decoration: none; /* Remove underline */
-  color: #007bff; /* Button text color */
-  font-size: 1em; /* Font size */
-  padding: 10px 20px; /* Button padding */
-  border: 1px solid #007bff; /* Button border */
-  border-radius: 5px; /* Rounded corners */
-  transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+.footer .action-buttons .btn {
+  text-decoration: none;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
 }
 
-/* Button hover effect */
-.action-buttons .btn:hover {
-  background-color: #007bff; /* Hover background color */
-  color: #ffffff; /* Hover text color */
+.footer .action-buttons .btn:hover {
+  background-color: #555;
 }
 
-/* Responsive design for smaller screens */
+/* Responsive styling */
 @media (max-width: 768px) {
   .footer-content {
-    flex-direction: column; /* Stack children vertically */
+    flex-direction: column;
+    align-items: center;
   }
-  .logo {
-    margin-bottom: 20px; /* Space below logo */
+
+  .footer .logo {
+    margin-bottom: 20px;
   }
-  .action-buttons .btn {
-    margin: 10px 0; /* Vertical spacing for buttons */
+
+  .footer .action-buttons {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
   }
+
+  .footer .action-buttons .btn {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+
+
+.icon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  text-decoration: none; /* Added for anchor element */
+}
+
+.icon-btn:hover {
+  background-color: #0057b300;
+}
+
+.icon-btn .socials {
+  max-width: 48px;
+  max-width: 48px;
+  fill: rgba(255, 255, 255, 0);
+}
+
+
+.section {
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
