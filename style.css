@@ -612,3 +612,81 @@ html {
 .scrollable-element {
   scroll-behavior: smooth;
 }
+
+
+/* General footer styling */
+.footer {
+  background-color: #f8f9fa; /* Light gray background */
+  padding: 20px 0; /* Vertical padding */
+  text-align: center; /* Center-align text */
+  width: 100%; /* Full width */
+  border-top: 1px solid #e7e7e7; /* Light border at the top */
+}
+
+/* Footer content container */
+.footer-content {
+  display: flex; /* Flexbox layout */
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  justify-content: space-between; /* Space out the children evenly */
+  align-items: center; /* Center align vertically */
+  max-width: 1200px; /* Max width for content */
+  margin: 0 auto; /* Center horizontally */
+  padding: 0 20px; /* Horizontal padding */
+}
+
+/* Logo container */
+.logo {
+  display: flex; /* Flexbox layout */
+  align-items: center; /* Center align vertically */
+  margin-bottom: 10px; /* Space below the logo */
+}
+
+/* Logo image */
+.logo img {
+  height: 50px; /* Set height of logo image */
+  margin-right: 10px; /* Space between logo and text */
+}
+
+/* Logo text */
+.logo h3 {
+  margin: 0; /* Remove default margin */
+  font-size: 1.5em; /* Set font size */
+}
+
+/* Action buttons container */
+.action-buttons {
+  display: flex; /* Flexbox layout */
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  justify-content: center; /* Center horizontally */
+}
+
+/* Individual buttons */
+.action-buttons .btn {
+  margin: 5px 10px; /* Space around buttons */
+  text-decoration: none; /* Remove underline */
+  color: #007bff; /* Button text color */
+  font-size: 1em; /* Font size */
+  padding: 10px 20px; /* Button padding */
+  border: 1px solid #007bff; /* Button border */
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+}
+
+/* Button hover effect */
+.action-buttons .btn:hover {
+  background-color: #007bff; /* Hover background color */
+  color: #ffffff; /* Hover text color */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column; /* Stack children vertically */
+  }
+  .logo {
+    margin-bottom: 20px; /* Space below logo */
+  }
+  .action-buttons .btn {
+    margin: 10px 0; /* Vertical spacing for buttons */
+  }
+}
