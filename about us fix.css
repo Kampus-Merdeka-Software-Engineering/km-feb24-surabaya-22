@@ -1,0 +1,262 @@
+html,
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    text-decoration: none;
+    background: radial-gradient(#281c3e, #0f051d);
+}
+
+/* Untuk elemen yang ada dalam section */
+section {
+    width: 100%;
+    padding: 4rem 0;
+}
+
+/* Untuk bagian tim */
+.team {
+    background: radial-gradient(#281c3e, #0f051d);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* Untuk konten tim */
+.team-content {
+    width: 100%;
+    max-width: 1350px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(150px, 1fr));
+    align-items: center;
+    gap: 2rem;
+    text-align: center;
+    margin-top: -10px;
+}
+
+/* Untuk gambar dalam kotak */
+.team-content img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    margin-bottom: 5px;
+}
+
+/* Untuk judul tengah */
+.center h1 {
+    color: #ffffff;
+    font-size: 4rem;
+    text-align: center;
+}
+
+/* Untuk kotak konten */
+.box {
+    padding: 16px;
+    background: #1b1229;
+    border-radius: 15px;
+    transition: all 0.38s ease;
+    max-width: 300px;
+    margin: 0 auto; /* Pastikan kotaknya berada di tengah */
+}
+
+/* Untuk judul dalam kotak */
+.box h3 {
+    font-size: 23px;
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+    margin-bottom: 0;
+    padding: 0;
+}
+
+/* Untuk deskripsi dalam kotak */
+.box h5 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #b7b4bb;
+    margin-bottom: 15px;
+    letter-spacing: 2px;
+}
+
+/* Untuk ikon di dalam kotak */
+.icons i {
+    display: inline-block;
+    color: #fff;
+    font-size: 30px;
+    margin: 0 8px;
+    transition: all 0.38s ease;
+}
+
+/* Untuk efek hover pada kotak */
+.icons i:hover {
+    transform: scale(1.2);
+}
+
+/* Untuk efek hover pada kotak */
+.box:hover {
+    transform: translateY(-10px);
+}
+
+/* Media query untuk ukuran layar yang lebih kecil */
+@media (max-width: 1240px) {
+    .team {
+        width: 100%;
+        height: auto;
+        padding: 30px 2%;
+    }
+    .center h1 {
+        font-size: 3.2rem;
+    }
+}
+
+/* Untuk bagian proyek */
+.project {
+    background: radial-gradient(#281c3e, #0f051d);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 5px; /* Tambahkan padding untuk memisahkan bagian proyek dari bagian tim */
+    margin-top: 0px;
+}
+
+/* Untuk konten proyek */
+.project-content {
+    width: 100%;
+    max-width: 1350px;
+    margin-top: 0; /* Sesuaikan margin top agar tidak terlalu dekat dengan section sebelumnya */
+    display: grid;
+    grid-template-columns: repeat(2, minmax(150px, 1fr));
+    align-items: center;
+    gap: 2rem;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Untuk gambar dalam konten proyek */
+.project img {
+    width: 449.99px;
+    height: 262px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    align-items: center;
+    text-align: center;
+}
+
+/* Untuk judul dan tombol dalam konten proyek */
+.project h2,
+.project a.btn {
+    font-size: 25px;
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+/* Untuk tombol dalam konten proyek */
+.project a.btn {
+    background-color: #fff;
+    color: #000000;
+    padding: 10px 20px;
+    border-radius: 20px;
+    margin-top: 10px;
+    text-align: center;
+    display: inline-block;
+    transition: background-color 0.3s, transform 0.3s;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+/* Efek hover pada tombol */
+.project a.btn:hover {
+    background-color: #e0e0e0;
+    transform: scale(1.05);
+}
+
+/* Untuk menata ulang konten proyek */
+.project-content .box{
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Mengatur vertikal tengah */
+    justify-content: center; /* Mengatur vertikal tengah */
+}
+
+/*footer*/
+
+/* CSS Anda di sini */
+
+.footer {
+    background-color: #1b1229;
+    color: #ffffff;
+    padding: 40px 0; /* Membuat padding lebih besar */
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer .logo{
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 60px; 
+    height: auto;
+    margin-right: 10px;
+}
+
+.logo h3 {
+    margin: 0;
+    font-size: 20px; 
+    padding-right: 30px;
+}
+
+.logo .btn{
+    text-decoration: none;
+    color: #ffffff;
+}
+.action-buttons .btn {
+    background-color: #ffffff;
+    color: #1b1229;
+    padding: 15px 30px; /* Membuat tombol lebih besar */
+    border-radius: 30px; /* Membuat sudut tombol lebih bulat */
+    text-decoration: none;
+    margin-right: 20px; /* Meningkatkan jarak antara tombol */
+    font-weight: bold;
+}
+
+.action-buttons .btn:hover {
+    background-color: #e0e0e0;
+    color: #1b1229;
+}
+
+/* Media query untuk perangkat dengan lebar maksimum 600px (misalnya perangkat mobile) */
+@media only screen and (max-width: 600px) {
+    .team-content {
+        grid-template-columns: repeat(1, minmax(150px, 1fr)); /* Mengubah tata letak menjadi satu kolom */
+    }
+    .project-content {
+        grid-template-columns: repeat(1, minmax(150px, 1fr)); /* Mengubah tata letak menjadi satu kolom */
+    }
+    .footer .footer-content{
+        grid-template-columns: repeat(1, minmax(150px, 1fr));
+        align-items: center;
+        text-align: center;
+        flex-direction: column;
+    }
+    .footer .logo, .footer .action-buttons{
+        margin-bottom: 20px;
+    }
+    .action-buttons .btn{
+        width: 80%;
+        padding: 10px 20px;
+    }
+    
+}
