@@ -292,14 +292,24 @@ document.addEventListener('DOMContentLoaded', () => {
                         datasets: [{
                             label: 'Sales by Category',
                             data: data1,
-                            backgroundColor: labels1.map((_, i) => `hsl(${i * 360 / labels1.length}, 70%, 50%)`)
+                            backgroundColor: labels1.map((_, i) => `hsl(${i * 360 / labels1.length}, 70%, 50%)`),
+        
                         }]
                     },
                     options: {
                         responsive: true,
-                        maintainAspectRatio: false
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: {
+                                labels: {
+                                    color: 'black' // Set label text color to black
+                                }
+                            }
+                        }
                     }
-                });
+                }
+                    
+                );
 
                 salesChart2 = new Chart(ctx2, {
                     type: 'bar',
@@ -440,6 +450,7 @@ document.addEventListener("DOMContentLoaded", function() {
         console.error("Modal, button, or close element not found!");
         return;
     }
+    
 
     // Variables for pagination
     let currentPage = 1;
@@ -520,14 +531,18 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
 
-    // When the user clicks the button, open the modal and fetch data
     btn.onclick = function() {
         console.log("Button clicked");
         modal.style.display = "block";
         console.log("Modal display set to block");
         fetchAndDisplayData();
+        // Add a small delay to allow CSS transitions to be applied
+        setTimeout(() => {
+            modal.classList.add('show');
+        }, 10); // Add a slight delay to trigger the transition
+        modal.querySelector('.modal-content').classList.add('show');
     }
-
+    
     // When the user clicks on <span> (x), close the modal
     span.onclick = function() {
         console.log("Close button clicked");
@@ -536,17 +551,88 @@ document.addEventListener("DOMContentLoaded", function() {
         document.getElementById("modal-body").innerHTML = '';
         document.getElementById("pagination-controls").innerHTML = '';
         currentPage = 1; // Reset to the first page
+        modal.querySelector('.modal-content').classList.remove('show');
+        setTimeout(() => {
+            modal.classList.remove('show');
+        }, 300); // Match the transition duration in CSS
     }
-
+    
     // When the user clicks anywhere outside of the modal, close it
     window.onclick = function(event) {
-        if (event.target == modal) {
+        if (event.target === modal) {
             console.log("Outside click detected");
             modal.style.display = "none";
             // Clear the modal body content
             document.getElementById("modal-body").innerHTML = '';
             document.getElementById("pagination-controls").innerHTML = '';
             currentPage = 1; // Reset to the first page
-        }
+        } 
     }
+
+
+    document.addEventListener( function() {
+        // Get all the anchor links in the header navigation
+        const links = document.querySelectorAll('.header-right a');
+    
+        // Add a click event listener to each link
+        links.forEach(link => {
+            link.addEventListener('click', function(event) {
+                // Prevent the default anchor behavior
+                event.preventDefault();
+    
+                // Get the target element's ID from the href attribute
+                const targetId = this.getAttribute('href').substring(1);
+    
+                // Get the target element by ID
+                const targetElement = document.getElementById(targetId);
+    
+                // Scroll to the target element smoothly
+                targetElement.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    });
+    
+
+
+    //Slider JS
+const myslide = document.querySelectorAll('.myslide'),
+dot = document.querySelectorAll('.dot');
+let counter = 1;
+slidefun(counter);
+
+
+function plusSlides(n) {
+counter += n;
+slidefun(counter);
+resetTimer();
+}
+function currentSlide(n) {
+counter = n;
+slidefun(counter);
+resetTimer();
+}
+
+
+function slidefun(n) {
+
+let i;
+for(i = 0;i<myslide.length;i++){
+  myslide[i].style.display = "none";
+}
+for(i = 0;i<dot.length;i++) {
+  dot[i].className = dot[i].className.replace(' active', '');
+}
+if(n > myslide.length){
+ counter = 1;
+ }
+if(n < 1){
+ counter = myslide.length;
+ }
+myslide[counter - 1].style.display = "block";
+dot[counter - 1].className += " active";
+}
 });
+
+
