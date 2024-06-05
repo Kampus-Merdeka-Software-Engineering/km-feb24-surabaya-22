@@ -132,12 +132,43 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
 
+            function calculateMonthlyPizzaSold(data) {
+              const monthNames = [
+                  "January", "February", "March", "April", "May", "June",
+                  "July", "August", "September", "October", "November", "December"
+              ];
+
+              const monthlyPizzaSold = {};
+
+              data.forEach(order => {
+                const { quantity, date } = order;
+                const monthIndex = new Date(date).getMonth();
+                const monthName = monthNames[monthIndex];
+        
+                // If this month hasn't been encountered yet, initialize its total to 0
+                if (!monthlyPizzaSold[monthName]) {
+                    monthlyPizzaSold[monthName] = 0;
+                }
+        
+                // Increment the total pizzas sold for this month by the quantity of the current order
+                monthlyPizzaSold[monthName] += parseInt(quantity);
+            });
+        
+            // Create the result object containing total pizzas sold for each month
+            const result = {};
+            for (const month of monthNames) {
+                result[month] = monthlyPizzaSold[month] || 0;
+            }
+        
+            return result;
+        }
 
             const monthlySalesByCategory = calculateMonthlySalesByCategory(team22);
             const monthlySalesByPizza = calculateMonthlySalesByPizza(team22);
             const monthlySalesBySize = calculateMonthlySalesBySize(team22);
             const monthlyRevenue = calculateMonthlyRevenue(team22);
             const monthlyOrders = calculateMonthlyOrders(team22);
+            const monthlyPizzaSold = calculateMonthlyPizzaSold (team22);
 
 
             function calculateTotalRevenue(data) {
@@ -233,11 +264,13 @@ document.addEventListener('DOMContentLoaded', () => {
             const ctx3 = document.getElementById('salesChart3').getContext('2d');
             const ctx4 = document.getElementById('salesChart4').getContext('2d');
             const ctx5 = document.getElementById('salesChart5').getContext('2d');
+            const ctx6 = document.getElementById('salesChart6').getContext('2d');
             let salesChart1;
             let salesChart2;
             let salesChart3;
             let salesChart4;
             let salesChart5;
+            let salesChart6;
 
             function updateChart() {
                 const selectedMonths = Array.from(document.querySelectorAll('.filter-container input:checked')).map(input => input.value);
@@ -265,6 +298,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 const labels5 = Object.keys(monthlyOrders);
                 const data5 = Object.values(monthlyOrders);
 
+                const labels6 = Object.keys(monthlyPizzaSold)
+                const data6 = Object.values(monthlyPizzaSold);
+
+
                 if (salesChart1) {
                     salesChart1.destroy();
                 }
@@ -284,6 +321,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (salesChart5) {
                     salesChart5.destroy();
                 }
+
+                
+                if (salesChart6) {
+                  salesChart6.destroy();
+              }
+              
+
 
                 salesChart1 = new Chart(ctx1, {
                     type: 'pie',
@@ -395,7 +439,34 @@ document.addEventListener('DOMContentLoaded', () => {
                         }
                     }
                 });
-            }
+
+            salesChart6 = new Chart(ctx6, {
+              type: 'line',
+              data: {
+                  labels: labels6,
+                  datasets: [{
+                      label: 'Monthly Pizza Sold',
+                      data: data6,
+                      backgroundColor: 'rgba(153, 102, 255, 0.2)',
+                      borderColor: 'rgba(153, 102, 255, 1)',
+                      borderWidth: 1
+                  }]
+              },
+              options: {
+                  responsive: true,
+                  maintainAspectRatio: false,
+                  scales: {
+                      y: {
+                          beginAtZero: true
+                      }
+                  }
+              }
+          });
+
+        }
+          
+    
+            
 
             function filterDataByMonths(data, selectedMonths) {
                 if (selectedMonths.length === 0) return data;
