@@ -441,7 +441,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
 
             salesChart6 = new Chart(ctx6, {
-              type: 'line',
+              type: 'bar',
               data: {
                   labels: labels6,
                   datasets: [{
