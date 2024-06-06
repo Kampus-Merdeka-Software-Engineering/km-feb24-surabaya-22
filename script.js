@@ -505,6 +505,76 @@ document.addEventListener('DOMContentLoaded', () => {
         .catch(error => console.error('Error fetching the sales data:', error));
 });
 
+//Slider JS
+const myslide = document.querySelectorAll('.myslide'),
+dot = document.querySelectorAll('.dot');
+let counter = 1;
+slidefun(counter);
+
+
+function plusSlides(n) {
+counter += n;
+slidefun(counter);
+    resetTimer();
+}
+function currentSlide(n) {
+    counter = n;
+    slidefun(counter);
+    resetTimer();
+}
+
+function slidefun(n) {
+let i;
+for(i = 0;i<myslide.length;i++){
+  myslide[i].style.display = "none";
+}
+for(i = 0;i<dot.length;i++) {
+  dot[i].className = dot[i].className.replace(' active', '');
+}
+if(n > myslide.length){
+ counter = 1;
+ }
+if(n < 1){
+ counter = myslide.length;
+ }
+myslide[counter - 1].style.display = "block";
+dot[counter - 1].className += " active";
+}
+
+//Slider JS Recomendation
+const myslideRec = document.querySelectorAll('.myslideRec'),
+dotRec = document.querySelectorAll('.dotRec');
+let counterRec = 1;
+slidefunRec(counterRec);
+
+function plusSlidesRec(n) {
+counterRec += n;
+slidefunRec(counterRec);
+    resetTimer();
+}
+function currentSlideRec(n) {
+    counterRec = n;
+    slidefunRec(counterRec);
+    resetTimer();
+}
+
+function slidefunRec(n) {
+let i;
+for(i = 0;i<myslideRec.length;i++){
+  myslideRec[i].style.display = "none";
+}
+for(i = 0;i<dotRec.length;i++) {
+  dotRec[i].className = dotRec[i].className.replace(' active', '');
+}
+if(n > myslideRec.length){
+ counterRec = 1;
+ }
+if(n < 1){
+ counterRec = myslideRec.length;
+ }
+myslideRec[counterRec - 1].style.display = "block";
+dotRec[counterRec - 1].className += " active";
+}
 
 document.addEventListener("DOMContentLoaded", function() {
     // Get the modal
@@ -665,45 +735,6 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
     
-
-
-    //Slider JS
-const myslide = document.querySelectorAll('.myslide'),
-dot = document.querySelectorAll('.dot');
-let counter = 1;
-slidefun(counter);
-
-
-function plusSlides(n) {
-counter += n;
-slidefun(counter);
-resetTimer();
-}
-function currentSlide(n) {
-counter = n;
-slidefun(counter);
-resetTimer();
-}
-
-
-function slidefun(n) {
-
-let i;
-for(i = 0;i<myslide.length;i++){
-  myslide[i].style.display = "none";
-}
-for(i = 0;i<dot.length;i++) {
-  dot[i].className = dot[i].className.replace(' active', '');
-}
-if(n > myslide.length){
- counter = 1;
- }
-if(n < 1){
- counter = myslide.length;
- }
-myslide[counter - 1].style.display = "block";
-dot[counter - 1].className += " active";
-}
 });
 
 
