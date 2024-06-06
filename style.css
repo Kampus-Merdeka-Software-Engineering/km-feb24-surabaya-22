@@ -47,6 +47,7 @@ img {
   margin-right: 30px;
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .header-right a {
@@ -101,21 +102,22 @@ img {
 .team-content{
   width: 100%;
   max-width: 1000px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, auto));
   align-items: center;
-  gap: 2rem;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
   text-align: center;
-  margin-top: 4rem;
   padding: 10px;
 }
 
 .box{
   padding: 16px;
+  max-width: 120px;
+  max-height: auto;
   background: #ffffff;
   border-radius: 15px;
-  transition: all .38s ease;
 }
 
 /*CSS Code of Text Style*/
@@ -435,9 +437,10 @@ button {
 /*CSS code of findings & recommendation*/
 .sectiontitle {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    text-align: center;
     font-size: 25px;
     line-height: 25px;
     margin: 20px;
@@ -453,6 +456,7 @@ button {
 
 .contentinsight {
   display: flex;
+  flex-wrap: wrap;
   align-items:center;
   justify-content: flex-start;
 }
@@ -596,6 +600,19 @@ button {
 }
 
 /* Optional: style for canvas if needed */
+
+
+.article {
+  display: flex;
+  flex-direction: wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%; /* Adjust width as needed */
+  max-width: 1300px; /* Maximum width for larger screens */
+  max-height: auto;
+  margin: 0 auto; /* Center the container */
+  padding-bottom: 120px;
+}
 #salesChart1{
   width: 100% !important; /* Ensure the canvas takes full width of the container */
   height: 100% !important; /* Ensure the canvas takes full height of the container */
@@ -703,9 +720,10 @@ html {
 
 /* General footer styling */
 .footer {
-  background-color: #333;
+  background-color: white;
   padding: 20px 0;
   text-align: center;
+  position: relative;
 }
 
 .footer-content {
@@ -727,7 +745,7 @@ html {
   display: flex;
   align-items: center;
   text-decoration: none;
-  color: white;
+  color: #c30e0e;
 }
 
 .footer .logo img {
@@ -742,7 +760,7 @@ html {
 
 .footer .action-buttons .btn {
   text-decoration: none;
-  color: white;
+  color: #c30e0e;
   padding: 10px 15px;
   border-radius: 5px;
   transition: background-color 0.3s;
