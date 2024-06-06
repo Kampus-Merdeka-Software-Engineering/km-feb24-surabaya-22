@@ -480,7 +480,7 @@ button {
 /*CSS Code of navigasi slider*/
 .prev, .next{
 	position: absolute;
-	top: 30%;
+	top: 40%;
 	transform: translate(-50%);
 	font-size: 50px;
 	padding: 20px;
