@@ -1,405 +1,409 @@
-<!DOCTYPE html>
-<html>
-<head>
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="style.css">
-   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-</head>
+    <!DOCTYPE html>
+    <html>
+    <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    </head>
 
-<body>
-  <nav class="header">
-    <a href=#default ><img src="assets/team22 no background.svg" class="headerlogo"></a>
-    <span class="header-title">Surabaya Team's 22</span> 
-      <div class="header-right">
-        <a href="#home"> <h1>Home</h1></a>
-        <a href="#findings"> <h1>Insight</h1></a>
-        <a href="#recommendation"> <h1>Recommendation</h1></a>
-        <a href="#about-us"> <h1>About</h1></a>
-      </div>
-  </nav>
+    <body>
+    <nav class="header">
+        <a href=#default ><img src="assets/team22 no background.svg" class="headerlogo"></a>
+        <span class="header-title">Surabaya Team's 22</span> 
+        <div class="header-right">
+            <a href="#home"> <h1>Home</h1></a>
+            <a href="#findings"> <h1>Insight</h1></a>
+            <a href="#recommendation"> <h1>Recommendation</h1></a>
+            <a href="#about-us"> <h1>About</h1></a>
+        </div>
+    </nav>
 
-<div class="graphcontent" id="home" >
-  <section class="section1">
-      <div class="section2">
-        <div class="filterbox-type">
-            <img class="imgholder1" src="assets/cart.svg">
+    <div class="graphcontent" id="home" >
+    <section class="section1">
+        <div class="section2">
+            <div class="filterbox-type">
+                <img class="imgholder1" src="assets/cart.svg">
+                <div class="filterbox">
+                    <h2>Total Order</h2>
+                    <h1><span id="total-orders"></span></h1>
+                </div>
+            </div>
+
+            <div class="filterbox-type">
+                <img class="imgholder1" src="assets/Rectangle 30.png">
+                <div class="filterbox">   
+                    <h2>Total Revenue</h2>
+                    <h1><span id="total-revenue"></span></h1>
+                </div> 
+            </div>
+
+            <div class="filterbox-type"> 
+                <img class="imgholder1" src="assets/pizza.png">    
+                <div class="filterbox">
+                    <h2>Total Pizza Sold</h2>
+                    <h1>49,574</h1>
+                </div>
+        </div>
+
             <div class="filterbox">
-                <h2>Total Order</h2>
-                <h1><span id="total-orders"></span></h1>
+                <div class="filter-container">
+                    <label>Select Months:</label>
+                    <br>
+                    <div id="checkboxContainer"></div>
+                </div>
             </div>
+            <button id="openModalBtn" class="btn-masuk">Lihat Tabel</button>
         </div>
 
-        <div class="filterbox-type">
-            <img class="imgholder1" src="assets/Rectangle 30.png">
-            <div class="filterbox">   
-                <h2>Total Revenue</h2>
-                <h1><span id="total-revenue"></span></h1>
-            </div> 
-        </div>
-
-        <div class="filterbox-type"> 
-            <img class="imgholder1" src="assets/pizza.png">    
-            <div class="filterbox">
-                <h2>Total Pizza Sold</h2>
-                <h1>49,574</h1>
-            </div>
-      </div>
-
-          <div class="filterbox">
-              <div class="filter-container">
-                  <label>Select Months:</label>
-                  <br>
-                  <div id="checkboxContainer"></div>
-              </div>
-          </div>
-          <button id="openModalBtn" class="btn-masuk">Lihat Tabel</button>
-      </div>
-
-    <div class="section4">
-        <div class="section4">        
-            <div class="cardlarge">
-                <div id="chartContainer5" class="chart-container">
-                <canvas id="salesChart5"></canvas>
-                </div>
-                </div>
-    
+        <div class="section4">
+            <div class="section4">        
                 <div class="cardlarge">
-                <div id="chartContainer4" class="chart-container">
-                <canvas id="salesChart4"></canvas>
-                </div>
-                </div>
-                <div class="cardlarge">
-                  <div id="chartContainer6" class="chart-container">
-                  <canvas id="salesChart6"></canvas>
-                  </div>
-                </div>
-                <div class="cardlarge">
-                <div id="chartContainer2" class="chart-container">
-                <canvas id="salesChart2"></canvas>
-                </div>
-                </div>
-        </div>
-  
-
-        <div class="section3">
-            <div class="cardmedium">
-                <div id="chartContainer1" class="chart-container">
-                <canvas id="salesChart1"></canvas>
-                </div>
-            </div>
-
-            <div class="cardmedium">
-                <div id="chartContainer3" class="chart-container">
-                <canvas id="salesChart3"></canvas>
-                </div>
-            </div>
-        </div>
-    </div>
-  </div>
-
-
-  <div id="myModal" class="modal">
-    <!-- Modal content -->
-    <div class="modal-content">
-        <span class="close">&times;</span>
-        <h2>Modal Header</h2>
-        <div id="modal-body">
-            <!-- Table will be inserted here -->
-        </div>
-        <div id="pagination-controls">
-            <!-- Pagination controls will be inserted here -->
-        </div>
-    </div>
-</div>
-
-</section>
-
-<div class="sectiontitle" id="findings">
-    <h1>FINDINGS</h1>
-    <h2>after examining the data, here's our findings</h2>
-</div>
-    
-<div class="slider">
-  <div class="slider-container">  
-    <div class="myslide fade">
-        <div class="h1">
-            <h2>Monthly Sales</h2>
-        </div>
-        <div class="contentinsight">
-            <img src="assets/Monthly Sales.png" alt="" >
-            <div class="text1">
-                <p> Total transaksi terendah terjadi di bulan September dan transaksi terjadi tertinggi di bulan Juli</p></p>
-                <p> Penjualan pizza cenderung lebih tinggi di awal tahun (Januari-April) dan akhir tahun (November-Desember).</p>
-                <p> Penjualan pizza cenderung lebih rendah di pertengahan tahun (Mei-Oktober).</p>
-                <p> Total pertumbuhan penjualan yaitu -5.0%</p>
-                <p> Pertumbuhan transaksi sendiri berkisar di 7.0%</p>
-                <p> Target tahun depan minimal 7% = 3403 transaksi</p>
-            </div>
-        </div>
-    </div>    
-  </div>
-
-  <div class="slider-container"> 
-    <div class="myslide fade">
-        <div class="h1">
-            <h2>Monthly Revenue</h2>
-        </div>
-        <div class="contentinsight">
-            <img src="assets/Monthly Revenue.png" alt="" >
-            <div class="text1">
-                <p> Total pendapatan terendah terjadi di bulan Oktober sebesar 64027,6 </p>
-                <p> Total pendapatan tertinggi yaitu 72557,9 terjadi di bulan Juli</p>
-                <p> Pertumbuhan month on month pendapatan yaitu 7.87%</p>
-                <p> Target pendapatan minimum 7% = 57250,2035</p>
-            </div>
-        </div>
-    </div>    
-  </div>
-
-  <div class="slider-container"> 
-    <div class="myslide fade">
-        <div class="h1">
-            <h2>Sales By Pizza Type</h2>
-        </div>
-        <div class="contentinsight">
-            <img src="assets/Group 26.svg" alt="" >
-            <div class="text1">
-                <p> Classic Pizza adalah kategori pizza paling populer</p>
-                <p> Total pendapatan tertinggi yaitu 72557,9 terjadi di bulan Juli</p>
-                <p> Supreme Pizza dan Veggie Pizza juga populer</p>
-                <p> Chicken Pizza secara konsisten menjadi kategori pizza dengan penjualan terendah di setiap bulan</p>
-                <p> Perbedaan penjualan antara kategori tertinggi dan terendah cukup signifikan</p>
-            </div>
-        </div>
-    </div>
-  </div>
-
-  <div class="slider-container"> 
-    <div class="myslide fade">
-        <div class="h1">
-            <h2>Sales By Pizza Name</h2>
-        </div>
-        <div class="contentinsight">
-            <img src="assets/Group 26.svg" alt="" >
-            <div class="text1">
-                <p> The Classic Deluxe Pizza adalah menu pizza paling populer dengan total penjualan tertinggi</p>
-                <p> sebanyak 2.459 pizza sepanjang 12 bulan</p>
-                <p> Supreme Pizza dan Veggie Pizza juga populer</p>
-                <p> 3 Menu pizza dengan kuantitas pembelian tertinggi yaitu The Classic Deluxe Pizza, The Hawaiian Pizza</p>
-                <p> dan The Pepperoni Pizza berasal dari pizza kategori classic</p>
-            </div>
-        </div>
-    </div>
-  </div>
-  
-  <div class="slider-container"> 
-    <div class="myslide fade">
-        <div class="h1">
-            <h2>Sales By Pizza Size</h2>
-        </div>
-        <div class="contentinsight">
-            <img src="assets/Sales by size.png" alt="" >
-            <div class="text1">
-                <p> Pizza ukuran XXL menjadi penjualan terendah dalam 12 bulan sejumlah 0 dari</p>
-                <p> total keseluruhan penjualan size XXL selama satu tahun yaitu 28 </p>
-                <p> Penjualan tertinggi secara 12 bulan berturut-turut: ukuran L sejumlah 1,697 dari</p>
-                <p> total keseluruhan penjualan size L selama satu tahun yaitu 18,526</p>
-            </div>
-        </div>     
-    </div>
-
-       <!-- onclick js -->
-     <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-     <a class="next" onclick="plusSlides(1)">&#10095;</a>
-   
-   <div class="dotsbox" style="text-align:center">
-       <span class="dot" onclick="currentSlide(1)"></span>
-       <span class="dot" onclick="currentSlide(2)"></span>
-       <span class="dot" onclick="currentSlide(3)"></span>
-       <span class="dot" onclick="currentSlide(4)"></span>
-       <span class="dot" onclick="currentSlide(5)"></span>
-   </div>
-   <!-- /onclick js -->    
- </div>
-</div>
-</div>
-
-<div class="sectiontitle" id="recomendation">
-    <h1>RECOMMENDATION</h1>
-    <h2>after examining the insight, here's our recommendation</h2>
-</div>
+                    <div id="chartContainer5" class="chart-container">
+                    <canvas id="salesChart5"></canvas>
+                    </div>
+                    </div>
         
-<div class="slider">
-  <div class="slider-container">  
-    <div class="myslide fade">
-        <div class="h1">
-           <h2>Menu Change</h2>
-        </div>
-        <div class="contentinsight">
-           <img src="assets/pizza menu change.png" alt="" >
-           <div class="text1">
-               <p> Made new menu with Large size and ingredients that commonly used in 5 top</p>
-               <p> pizza type (Chicken, Mozarella) for covering 24,60% minimum target of sales and more revenue</p>
-               <p> Deleting Brie Carre Pizza as lowest sales for eficiency that lost</p>
-               <p> revenue as 11.588,50 which still covered by total minimum revenue</p>
-               <p> Create a strategy to increase The Greek Pizza, especially the XXL size by bundling it with pizza</p>
-               <p> that sells frequently like pepperonipizza or else that have low production costs but still attract customers</p>
+                    <div class="cardlarge">
+                    <div id="chartContainer4" class="chart-container">
+                    <canvas id="salesChart4"></canvas>
+                    </div>
+                    </div>
+                    <div class="cardlarge">
+                    <div id="chartContainer6" class="chart-container">
+                    <canvas id="salesChart6"></canvas>
+                    </div>
+                    </div>
+                    <div class="cardlarge">
+                    <div id="chartContainer2" class="chart-container">
+                    <canvas id="salesChart2"></canvas>
+                    </div>
+                    </div>
+            </div>
+    
+
+            <div class="section3">
+                <div class="cardmedium">
+                    <div id="chartContainer1" class="chart-container">
+                    <canvas id="salesChart1"></canvas>
+                    </div>
+                </div>
+
+                <div class="cardmedium">
+                    <div id="chartContainer3" class="chart-container">
+                    <canvas id="salesChart3"></canvas>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-</div>
 
-   <div class="slider-container"> 
+
+    <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Modal Header</h2>
+            <div id="modal-body">
+                <!-- Table will be inserted here -->
+            </div>
+            <div id="pagination-controls">
+                <!-- Pagination controls will be inserted here -->
+            </div>
+        </div>
+    </div>
+
+    </section>
+
+    <div class="sectiontitle" id="findings">
+        <h1>FINDINGS</h1>
+        <h2>after examining the data, here's our findings</h2>
+    </div>
+        
+    <div class="slider">
     <div class="myslide fade">
-        <div class="h1">
-            <h2>Marketing</h2>
+        <div class="slider-container"> 
+            <div class="h1">
+                <h2>Monthly Sales</h2>
+            </div>
+            <div class="contentinsight">
+                <img src="assets/Monthly Sales.png" alt="" >
+                <div class="text1">
+                    <p> Total transaksi terendah terjadi di bulan September dan transaksi terjadi tertinggi di bulan Juli</p></p>
+                    <p> Penjualan pizza cenderung lebih tinggi di awal tahun (Januari-April) dan akhir tahun (November-Desember).</p>
+                    <p> Penjualan pizza cenderung lebih rendah di pertengahan tahun (Mei-Oktober).</p>
+                    <p> Total pertumbuhan penjualan yaitu -5.0%</p>
+                    <p> Pertumbuhan transaksi sendiri berkisar di 7.0%</p>
+                    <p> Target tahun depan minimal 7% = 3403 transaksi</p>
+                </div>
+            </div>
+        </div>    
+    </div>
+
+    <div class="myslide fade">
+        <div class="slider-container">     
+            <div class="h1">
+                <h2>Monthly Revenue</h2>
+            </div>
+            <div class="contentinsight">
+                <img src="assets/Monthly Revenue.png" alt="" >
+                <div class="text1">
+                    <p> Total pendapatan terendah terjadi di bulan Oktober sebesar 64027,6 </p>
+                    <p> Total pendapatan tertinggi yaitu 72557,9 terjadi di bulan Juli</p>
+                    <p> Pertumbuhan month on month pendapatan yaitu 7.87%</p>
+                    <p> Target pendapatan minimum 7% = 57250,2035</p>
+                </div>
+            </div>
+        </div>    
+    </div>
+
+    <div class="myslide fade">
+        <div class="slider-container"> 
+            <div class="h1">
+                <h2>Sales By Pizza Type</h2>
+            </div>
+            <div class="contentinsight">
+                <img src="assets/Group 26.svg" alt="" >
+                <div class="text1">
+                    <p> Classic Pizza adalah kategori pizza paling populer</p>
+                    <p> Total pendapatan tertinggi yaitu 72557,9 terjadi di bulan Juli</p>
+                    <p> Supreme Pizza dan Veggie Pizza juga populer</p>
+                    <p> Chicken Pizza secara konsisten menjadi kategori pizza dengan penjualan terendah di setiap bulan</p>
+                    <p> Perbedaan penjualan antara kategori tertinggi dan terendah cukup signifikan</p>
+                </div>
+            </div>
         </div>
-        <div class="contentinsight">
-            <img src="assets/Marketing.png" alt="" >
+    </div>
+
+    <div class="myslide fade">
+        <div class="slider-container"> 
+            <div class="h1">
+                <h2>Sales By Pizza Name</h2>
+            </div>
+            <div class="contentinsight">
+                <img src="assets/Group 26.svg" alt="" >
+                <div class="text1">
+                    <p> The Classic Deluxe Pizza adalah menu pizza paling populer dengan total penjualan tertinggi</p>
+                    <p> sebanyak 2.459 pizza sepanjang 12 bulan</p>
+                    <p> Supreme Pizza dan Veggie Pizza juga populer</p>
+                    <p> 3 Menu pizza dengan kuantitas pembelian tertinggi yaitu The Classic Deluxe Pizza, The Hawaiian Pizza</p>
+                    <p> dan The Pepperoni Pizza berasal dari pizza kategori classic</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="myslide fade">
+        <div class="slider-container"> 
+            <div class="h1">
+                <h2>Sales By Pizza Size</h2>
+            </div>
+            <div class="contentinsight">
+                <img src="assets/Sales by size.png" alt="" >
+                <div class="text1">
+                    <p> Pizza ukuran XXL menjadi penjualan terendah dalam 12 bulan sejumlah 0 dari</p>
+                    <p> total keseluruhan penjualan size XXL selama satu tahun yaitu 28 </p>
+                    <p> Penjualan tertinggi secara 12 bulan berturut-turut: ukuran L sejumlah 1,697 dari</p>
+                    <p> total keseluruhan penjualan size L selama satu tahun yaitu 18,526</p>
+                </div>
+            </div>     
+        </div>
+    </div>
+
+        <!-- onclick js -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    
+        <br>
+    <div class="dotsbox" style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+    </div>
+    <!-- /onclick js -->    
+    </div>
+
+
+    <div class="sectiontitle" id="recomendation">
+        <h1>RECOMMENDATION</h1>
+        <h2>after examining the insight, here's our recommendation</h2>
+    </div>
+            
+    <div class="slider">
+    <div class="myslideRec fade">
+        <div class="slider-container">  
+            <div class="h1">
+            <h2>Menu Change</h2>
+            </div>
+            <div class="contentinsight">
+            <img src="assets/pizza menu change.png" alt="" >
             <div class="text1">
-                <p> Push highest pizza type sales to achieve 5 percent more than last year in order </p>
-                <p> covering 76,40% minimum target sales and 112,63% minimum revenue</p>
-                <p> Boost marketing technique for 10 best pizza name between day 1 - 20 each month to ensure sales goal</p>
-                <p> Limit pizza quota per day at day 21 - 31 with special discount to increase sales</p>
-            </div>   
+                <p> Made new menu with Large size and ingredients that commonly used in 5 top</p>
+                <p> pizza type (Chicken, Mozarella) for covering 24,60% minimum target of sales and more revenue</p>
+                <p> Deleting Brie Carre Pizza as lowest sales for eficiency that lost</p>
+                <p> revenue as 11.588,50 which still covered by total minimum revenue</p>
+                <p> Create a strategy to increase The Greek Pizza, especially the XXL size by bundling it with pizza</p>
+                <p> that sells frequently like pepperonipizza or else that have low production costs but still attract customers</p>
+                </div>
+            </div>
         </div>
-    </div>  
-
-    <!-- onclick js -->
-    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-    <a class="next" onclick="plusSlides(1)">&#10095;</a>
-  
-  <div class="dotsbox" style="text-align:center">
-      <span class="dot" onclick="currentSlide(1)"></span>
-      <span class="dot" onclick="currentSlide(2)"></span>
-  </div>
-  <!-- /onclick js -->
-  </div>
-</div>
-</div>
-
-<section class="about-us" id="about-us">
-    <div class="center">
-        <h1>Surabaya 22 Team</h1>
     </div>
 
-    <div class="team-content">
-        <div class="box">
-            <img src="assets/Ihsan.png" alt="">
-            <h3>Ihsan</h3>
-            <h5>IPB University</h5>
-            <a href="https://www.linkedin.com/in/muhammad-ihsan-taqiyuddin" class="icon-btn">
-              <img src="assets/linkedin.svg" class="socials" alt="LinkedIn"> </a>
-        </div>
-
-        <div class="box">
-            <img src="assets/Mega.png" alt="">
-            <h3>Mega</h3>
-            <h5>Universitas Jember</h5>
-            <a href="https://www.linkedin.com/in/widya-mega-wulandari-7901932b2" class="icon-btn">
-              <img src="assets/linkedin.svg" class="socials" alt="LinkedIn"> </a>
-        </div>
-
-        <div class="box">
-            <img src="assets/Isna.png" alt="">
-            <h3>Isna</h3>
-            <h5>Universitas Muhammadiyah Semarang</h5>
-            <a href="http://www.linkedin.com/in/isna-shofa-fahradina-20622b222" class="icon-btn">
-            <img src="assets/linkedin.svg" class="socials" alt="LinkedIn"> </a>
-        </div>
-
-        <div class="box">
-            <img src="assets/Deis.png" alt="">
-            <h3>Deis</h3>
-            <h5>Institut Teknologi PLN</h5>
-            <a href="http://linkedin.com/in/deis-zadiaqe-94b3512a2/" class="icon-btn">
-            <img src="assets/linkedin.svg" class="socials" alt="LinkedIn"> </a>
-        </div>
-
-        <div class="box">
-            <img src="assets/Dinda.png" alt="">
-            <h3>Dinda</h3>
-            <h5>Universitas Indonesia</h5>
-            <a href="https://www.linkedin.com/in/dinda-ayudia-larasati/" class="icon-btn">
-            <img src="assets/linkedin.svg" class="socials" alt="LinkedIn"> </a>
-        </div>
-
-        <div class="box">
-            <img src="assets/Zafira.png" alt="">
-            <h3>Zafira</h3>
-            <h5>Universitas Diponegoro</h5>
-            <a href="https: //www.linkedin.com/in/afifah-fadwa-6051b1263/" class="icon-btn">
-              <img src="assets/linkedin.svg" class="socials" alt="LinkedIn"> </a>
-        </div>
-
-        <div class="box">
-            <img src="assets/Afifah.png" alt="">
-            <h3>Afifah Fadwa</h3>
-            <h5>Universitas Brawijaya</h5>
-            <a href="https: //www.linkedin.com/in/afifah-fadwa-6051b1263/" class="icon-btn">
-            <img src="assets/linkedin.svg" class="socials" alt="LinkedIn"> </a>
-        </div>
-
-        <div class="box">
-            <img src="assets/Zhafran.png" alt="">
-            <h3>Zhafran</h3>
-            <h5>Universitas Terbuka</h5>
-            <a href="https: //www.linkedin.com/in/zhafran-alfani-suhada/" class="icon-btn">
-              <img src="assets/linkedin.svg" class="socials" alt="LinkedIn"> </a>
-        </div>
-
-        <div class="box">
-            <img src="assets/Sendi.png" alt="">
-            <h3>Sendi</h3>
-            <h5>Universitas Islam Riau</h5>
-            <a href="https://www.linkedin.com/in/sendi-satria-pangestu-2499472a4/" class="icon-btn">
-              <img src="assets/linkedin.svg" class="socials" alt="LinkedIn"> </a>
-        </div>
-
-        <div class="box">
-            <img src="assets/Wahyu.png" alt="">
-            <h3>Wahyu</h3>
-            <h5>Universitas Gunadarma</h5>
-            <a href="https://www.linkedin.com/in/wahyu-hariyadi-nurdin-60a8ab26a/" class="icon-btn">
-              <img src="assets/linkedin.svg" class="socials" alt="LinkedIn"> </a>
-        </div>
-
-        <div class="box">
-            <img src="assets/Corelia.png" alt="">
-            <h3>Cornelia</h3>
-            <h5>Institut Teknologi Nasional Malang</h5>
-            <a href="https://www.linkedin.com/in/corneliaboro/" class="icon-btn">
-              <img src="assets/linkedin.svg" class="socials" alt="LinkedIn"> </a>
-        </div>
-
-        <div class="box">
-            <img src="assets/Lucky.png" alt="">
-            <h3>Lucky</h3>
-            <h5>Universitas 17 Agustus 1945 Surabaya</h5>
-            <a href="https://www.linkedin.com/in/lucky-andrian-maulana-170113286/" class="icon-btn">
-              <img src="assets/linkedin.svg" class="socials" alt="LinkedIn"> </a>
-        </div>
-
+    <div class="myslideRec fade">
+        <div class="slider-container"> 
+            <div class="h1">
+                <h2>Marketing</h2>
+            </div>
+            <div class="contentinsight">
+                <img src="assets/Marketing.png" alt="" >
+                <div class="text1">
+                    <p> Push highest pizza type sales to achieve 5 percent more than last year in order </p>
+                    <p> covering 76,40% minimum target sales and 112,63% minimum revenue</p>
+                    <p> Boost marketing technique for 10 best pizza name between day 1 - 20 each month to ensure sales goal</p>
+                    <p> Limit pizza quota per day at day 21 - 31 with special discount to increase sales</p>
+                </div>   
+            </div>
+        </div>  
     </div>
-</section>
+
+        <!-- onclick js -->
+    <a class="prevRec" onclick="plusSlidesRec(-1)">&#10094;</a>
+    <a class="nextRec" onclick="plusSlidesRec(1)">&#10095;</a>
+    
+    <div class="dotsbox" style="text-align:center">
+        <span class="dotRec" onclick="currentSlideRec(1)"></span>
+        <span class="dotRec" onclick="currentSlideRec(2)"></span>
+    </div>
+    <!-- /onclick js -->
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <section class="about-us" id="about-us">
+        <div class="center">
+            <h1>Surabaya 22 Team</h1>
+        </div>
+
+        <div class="team-content">
+            <div class="box">
+                <img src="assets/Ihsan.png" alt="">
+                <h3>Ihsan</h3>
+                <h5>IPB University</h5>
+                <a href="https://www.linkedin.com/in/muhammad-ihsan-taqiyuddin" class="icon-btn">
+                <img src="assets/linkedin.svg" class="socials" alt="LinkedIn"> </a>
+            </div>
+
+            <div class="box">
+                <img src="assets/Mega.png" alt="">
+                <h3>Mega</h3>
+                <h5>Universitas Jember</h5>
+                <a href="https://www.linkedin.com/in/widya-mega-wulandari-7901932b2" class="icon-btn">
+                <img src="assets/linkedin.svg" class="socials" alt="LinkedIn"> </a>
+            </div>
+
+            <div class="box">
+                <img src="assets/Isna.png" alt="">
+                <h3>Isna</h3>
+                <h5>Universitas Muhammadiyah Semarang</h5>
+                <a href="http://www.linkedin.com/in/isna-shofa-fahradina-20622b222" class="icon-btn">
+                <img src="assets/linkedin.svg" class="socials" alt="LinkedIn"> </a>
+            </div>
+
+            <div class="box">
+                <img src="assets/Deis.png" alt="">
+                <h3>Deis</h3>
+                <h5>Institut Teknologi PLN</h5>
+                <a href="http://linkedin.com/in/deis-zadiaqe-94b3512a2/" class="icon-btn">
+                <img src="assets/linkedin.svg" class="socials" alt="LinkedIn"> </a>
+            </div>
+
+            <div class="box">
+                <img src="assets/Dinda.png" alt="">
+                <h3>Dinda</h3>
+                <h5>Universitas Indonesia</h5>
+                <a href="https://www.linkedin.com/in/dinda-ayudia-larasati/" class="icon-btn">
+                <img src="assets/linkedin.svg" class="socials" alt="LinkedIn"> </a>
+            </div>
+
+            <div class="box">
+                <img src="assets/Zafira.png" alt="">
+                <h3>Zafira</h3>
+                <h5>Universitas Diponegoro</h5>
+                <a href="https: //www.linkedin.com/in/afifah-fadwa-6051b1263/" class="icon-btn">
+                <img src="assets/linkedin.svg" class="socials" alt="LinkedIn"> </a>
+            </div>
+
+            <div class="box">
+                <img src="assets/Afifah.png" alt="">
+                <h3>Afifah Fadwa</h3>
+                <h5>Universitas Brawijaya</h5>
+                <a href="https: //www.linkedin.com/in/afifah-fadwa-6051b1263/" class="icon-btn">
+                <img src="assets/linkedin.svg" class="socials" alt="LinkedIn"> </a>
+            </div>
+
+            <div class="box">
+                <img src="assets/Zhafran.png" alt="">
+                <h3>Zhafran</h3>
+                <h5>Universitas Terbuka</h5>
+                <a href="https: //www.linkedin.com/in/zhafran-alfani-suhada/" class="icon-btn">
+                <img src="assets/linkedin.svg" class="socials" alt="LinkedIn"> </a>
+            </div>
+
+            <div class="box">
+                <img src="assets/Sendi.png" alt="">
+                <h3>Sendi</h3>
+                <h5>Universitas Islam Riau</h5>
+                <a href="https://www.linkedin.com/in/sendi-satria-pangestu-2499472a4/" class="icon-btn">
+                <img src="assets/linkedin.svg" class="socials" alt="LinkedIn"> </a>
+            </div>
+
+            <div class="box">
+                <img src="assets/Wahyu.png" alt="">
+                <h3>Wahyu</h3>
+                <h5>Universitas Gunadarma</h5>
+                <a href="https://www.linkedin.com/in/wahyu-hariyadi-nurdin-60a8ab26a/" class="icon-btn">
+                <img src="assets/linkedin.svg" class="socials" alt="LinkedIn"> </a>
+            </div>
+
+            <div class="box">
+                <img src="assets/Corelia.png" alt="">
+                <h3>Cornelia</h3>
+                <h5>Institut Teknologi Nasional Malang</h5>
+                <a href="https://www.linkedin.com/in/corneliaboro/" class="icon-btn">
+                <img src="assets/linkedin.svg" class="socials" alt="LinkedIn"> </a>
+            </div>
+
+            <div class="box">
+                <img src="assets/Lucky.png" alt="">
+                <h3>Lucky</h3>
+                <h5>Universitas 17 Agustus 1945 Surabaya</h5>
+                <a href="https://www.linkedin.com/in/lucky-andrian-maulana-170113286/" class="icon-btn">
+                <img src="assets/linkedin.svg" class="socials" alt="LinkedIn"> </a>
+            </div>
+
+        </div>
+    </section>
 
 
 
-<script src="script.js"></script>
-</body>
-<footer class="footer">
-<div class="footer-content">
-  <div class="logo">
-      <a href="#" class="btn"><img src="Logo Team 22.png" alt="Surabaya Team 22 Logo"></a>
-      <a href="#" class="btn"><h3>Surabaya Team 22</h3></a>
-  </div>
-  <div class="action-buttons">
-      <a href="#home" class="btn">Home</a>
-      <a href="#findings" class="btn">Insight</a>
-      <a href="#recomendation" class="btn">Recommendation</a>
-      <a href="#about-us" class="btn">About</a>
-  </div>
-</div>
-</footer>
+    <script src="script.js"></script>
+    </body>
+    <footer class="footer">
+    <div class="footer-content">
+    <div class="logo">
+        <a href="#" class="btn"><img src="Logo Team 22.png" alt="Surabaya Team 22 Logo"></a>
+        <a href="#" class="btn"><h3>Surabaya Team 22</h3></a>
+    </div>
+    <div class="action-buttons">
+        <a href="#home" class="btn">Home</a>
+        <a href="#findings" class="btn">Insight</a>
+        <a href="#recomendation" class="btn">Recommendation</a>
+        <a href="#about-us" class="btn">About</a>
+    </div>
+    </div>
+    </footer>
 
-</html>
+    </html>
