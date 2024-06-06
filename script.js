@@ -677,14 +677,13 @@ slidefun(counter);
 function plusSlides(n) {
 counter += n;
 slidefun(counter);
-resetTimer();
+    resetTimer();
 }
 function currentSlide(n) {
-counter = n;
-slidefun(counter);
-resetTimer();
+    counter = n;
+    slidefun(counter);
+    resetTimer();
 }
-
 
 function slidefun(n) {
 
