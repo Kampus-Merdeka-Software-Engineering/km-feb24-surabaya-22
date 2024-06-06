@@ -439,7 +439,6 @@ document.addEventListener('DOMContentLoaded', () => {
                         }
                     }
                 });
-            }
 
             salesChart6 = new Chart(ctx6, {
               type: 'line',
@@ -463,6 +462,11 @@ document.addEventListener('DOMContentLoaded', () => {
                   }
               }
           });
+
+        }
+          
+    
+            
 
             function filterDataByMonths(data, selectedMonths) {
                 if (selectedMonths.length === 0) return data;
