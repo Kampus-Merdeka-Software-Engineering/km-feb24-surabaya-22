@@ -156,7 +156,6 @@ img {
     font-family: helvetica;
     font-size: 12px;
     color: white;
-    
 }
 
 /*CSS Code of Cards*/
@@ -195,17 +194,14 @@ img {
   align-items: center;
   position: relative;
   width: 90%; /* Adjust width as needed */
-  max-width: 700px; /* Maximum width for larger screens */
+  max-width: 1180px; /* Maximum width for larger screens */
   margin: 0 auto; /* Center the container */
-  padding: 20px;
+  padding: 5px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for better visualization */
   border-radius: 12px;
   border: 1px solid #D2D5DA;
   background: rgba(227, 227, 227, 0.30);
   backdrop-filter: blur(2px);
-  max-width: 1161px;
-  margin: auto;
-  align-content:start;
 }
 
 .about-us {
@@ -287,30 +283,34 @@ img {
 /*CSS Code of filterbox style*/
 .filterbox {
   display: flex;
-  flex-direction: column;
+  flex-direction:column;
   align-items: center;
-  text-align: justify;
+  text-align: center;
+  font-size: 20px;
   width: 90%; /* Adjust width as needed */
-  max-width: 200px; /* Maximum width for larger screens */
-  margin: 12px; /* Center the container */
+  max-width: 800px; /* Maximum width for larger screens */
+  margin: 10px; /* Center the container */
   padding: 10px;
+  border-radius: 24px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for better visualization */
-  background: #fff; /* Optional: Add a background color */
-  border-radius: 8px;
-  color: rgb(219, 242, 231);
+  color:#d32995;
+  border: 3px solid #ffffff;
+  background:rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(2px);
 }
 
-.filterbox{
-    background-color:white;
-    border-radius: 24px;
-    height: max-content;
-    padding: 12px;
-    width: 800px;
-    margin:0 auto;
-    color: red;
-    font-size: 20px;
-    text-align: center;
-  }
+.filter-container {
+  align-items: center;
+  text-align: justify;
+  font-size: 30px;
+  font-style:bold;
+} 
+
+.imgholder1 {
+  max-width: 80px;
+  max-height: 90px;
+  margin:10 0px;
+}
 
 .content2 {
     margin-bottom: 20px;
@@ -324,7 +324,6 @@ img {
 
 .indicatorbox {
     padding: 15px;
-    background-color:#A34444;
     border-radius: 12px;
 }
 
@@ -337,11 +336,6 @@ img {
     background: #3A3A3A;
     background-color: white;
     margin-inline: 12px;
-}
-
-.imgholder1 {
-  max-width: 80px;
-  max-height: 90px;
 }
 
 /*CSS Code of Table Style*/
@@ -404,15 +398,15 @@ button {
   text-align: center;
   text-decoration: none;
   color: #ffffff;
-  background-color: #4dc9aa;
+  background-color: #c94da4;
   border-radius: 5px;
   border: 2px solid transparent;
   transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
 .btn-masuk:hover {
-  background-color: #57e7db;
-  border-color: #1a8775;
+  background-color: #ff9bed;
+  border-color: #c94da4;
 }
 
 .btn-masuk:focus {
@@ -430,115 +424,6 @@ button {
   border-color: #999999;
   cursor: not-allowed;
 }
-
-
-/*CSS code of findings & recommendation*/
-.sectiontitle {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-size: 25px;
-    line-height: 25px;
-    margin: 20px;
-    color: white;
-}
-
-.h1 {
-  color: white;
-  text-align: center;
-  font-size: 30px;
-  font-style: normal;
-}
-
-.contentinsight {
-  display: flex;
-  align-items:center;
-  justify-content: flex-start;
-}
-
-/*text isi*/
-.text1 {
-  text-align: left;
-  word-wrap: break-word;
-  font-size: 20px;
-  color: white;
-  line-height: 20px;
-  padding: 10px;
-  flex:1;
-} 
-
-/*image*/
-.contentinsight img{
-  width: 300px;
-  height: 300px;
-  margin: 20px;
-  align-items:center;
-  flex-shrink: 0;
-}
-
-/*CSS Code of navigasi slider*/
-.prev, .next{
-	position: absolute;
-	top: 40%;
-	transform: translate(-50%);
-	font-size: 50px;
-	padding: 20px;
-	cursor: pointer;
-	color: #fff;
-	transition: 0.1s;
-	user-select: none;
-  z-index: 10;
-}
-
-.prev:hover, .next:hover{
-	color: #826363; /* coklat */
-}
-
-.prev{
-	left: 20px;
-}
-
-.next{
-	right: -40px;
-}
-
-.dotsbox{
-	position: relative;
-	cursor: pointer;
-  text-align: center;
-}
-
-.dot{
-	display: inline-block;
-	width: 15px;
-	height: 15px;
-	border: 3px solid #fff;
-	border-radius: 50%;
-	margin: 0 10px;
-	cursor: pointer;
-}
-
-.dotRec{
-	display: inline-block;
-	width: 15px;
-	height: 15px;
-	border: 3px solid #fff;
-	border-radius: 50%;
-	margin: 0 10px;
-	cursor: pointer;
-}
-
-
-/* javascript */
-.active, .dot:hover{
-	border-color: #826363; /* blue */
-}
-
-.active, .dotRec:hover{
-	border-color: #826363; /* blue */
-}
-/* /javascript */
 
 .monthpicker a:hover {
     background-color: #ddd;
@@ -623,20 +508,11 @@ button {
 
 .filterbox-type {
   display: flex;
-  align-items: center;
-  width: 100%; /* Adjust width as needed */
-  max-width: 250px; /* Maximum width for larger screens */
-  margin: 0; /* Center the container */
-  padding: 8px;
-  gap : 8px;
+  align-items:center;
+  width: 300px; /* Adjust width as needed */
+  gap : 50px;
   border-radius: 8px; /* Optional: Rounded corners */
 }
-
-
-
-
-
-
 
 /* Modal styling */
 .modal {
@@ -690,6 +566,114 @@ button {
   text-decoration: none;
   cursor: pointer;
 }
+
+/*CSS code of findings & recommendation*/
+.sectiontitle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  line-height: 20px;
+  margin: 20px;
+  color: white;
+}
+
+.h1 {
+color: white;
+text-align: center;
+font-size: 30px;
+font-style: normal;
+margin:0;
+}
+
+.contentinsight {
+display: flex;
+align-items:center;
+justify-content: flex-start;
+}
+
+/*text isi*/
+.text1 {
+text-align: left;
+word-wrap: break-word;
+font-size: 20px;
+width: 800px;
+color: white;
+line-height: 35px;
+flex:1;
+} 
+
+/*image*/
+.contentinsight img{
+width: 300px;
+height: 300px;
+margin: 10px;
+align-items:center;
+flex-shrink: 0;
+}
+
+/*CSS Code of navigasi slider*/
+.prev, .next{
+position: absolute;
+top: 40%;
+transform: translate(-50%);
+font-size: 50px;
+padding: 20px;
+cursor: pointer;
+color: #fff;
+transition: 0.1s;
+user-select: none;
+z-index: 10;
+}
+
+.prev:hover, .next:hover{
+color: #826363; /* coklat */
+}
+
+.prev{
+left: 20px;
+}
+
+.next{
+right: -40px;
+}
+
+.dotsbox{
+position: relative;
+cursor: pointer;
+text-align: center;
+}
+
+.dot{
+display: inline-block;
+width: 15px;
+height: 15px;
+border: 3px solid #fff;
+border-radius: 50%;
+margin: 0 10px;
+cursor: pointer;
+}
+
+.dotRec{
+display: inline-block;
+width: 15px;
+height: 15px;
+border: 3px solid #fff;
+border-radius: 50%;
+margin: 0 10px;
+cursor: pointer;
+}
+
+/* javascript */
+.active, .dot:hover{
+border-color: #826363; /* blue */
+}
+
+.active, .dotRec:hover{
+border-color: #826363; /* blue */
+}
+/* /javascript */
 
 /* Smooth scrolling for the entire document */
 html {
@@ -814,8 +798,6 @@ section {
     width: 100%;
     padding: 4rem 0;
 }
-
-/* Untuk bagian tim */
 
 /* Untuk konten tim */
 .team-content {
