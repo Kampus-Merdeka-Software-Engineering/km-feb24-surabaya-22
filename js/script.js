@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const url = 'team22.json';
+    const url = 'data/team22.json';
 
     fetch(url)
         .then(response => response.json())
@@ -600,7 +600,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Function to fetch and display JSON data
     function fetchAndDisplayData() {
-        fetch('team22.json')
+        fetch('data/team22.json')
             .then(response => response.json())
             .then(data => {
                 jsonData = data.slice(0, 100); // Limit to 100 rows
