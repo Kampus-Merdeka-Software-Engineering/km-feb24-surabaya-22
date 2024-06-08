@@ -1034,7 +1034,7 @@ section {
 /* Untuk gambar dalam konten proyek */
 .project img {
   max-width: 100%;
-  max-height: auto;
+  max-height: 200px;
   border-radius: 15px;
   margin-bottom: 15px;
   align-items: center;
