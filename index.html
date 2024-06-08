@@ -9,13 +9,13 @@
 
     <body>
     <nav class="header">
-        <a href=#default ><img src="assets/team22 no background.svg" class="headerlogo"></a>
+        <a href=#home ><img src="assets/team22 no background.svg" class="headerlogo"></a>
         <span class="header-title">Surabaya Team's 22</span> 
         <div class="header-right">
             <a href="#home"> <h1>Home</h1></a>
-            <a href="#findings"> <h1>Insight</h1></a>
-            <a href="#recomendation"> <h1>Recommendation</h1></a>
-            <a href="#about-us"> <h1>About</h1></a>
+            <a href="#findings"> <h1>Temuan</h1></a>
+            <a href="#recomendation"> <h1>Rekomendasi</h1></a>
+            <a href="#about-us"> <h1>Tentang Tim</h1></a>
         </div>
     </nav>
     
@@ -63,43 +63,49 @@
         </div>
 
         <div class="section4">
-            <div class="section4">        
+            <content class="section4">        
                 <div class="cardlarge">
+                    <h1 class="chartheader"> ORDER BULANAN</h1>
                     <div id="chartContainer5" class="chart-container">
                     <canvas id="salesChart5"></canvas>
                     </div>
                     </div>
                     <div class="cardlarge">
+                    <h1 class="chartheader"> PENDAPATAN BULANAN</h1>
                     <div id="chartContainer4" class="chart-container">
                     <canvas id="salesChart4"></canvas>
                     </div>
                     </div>
                     <div class="cardlarge">
+                    <h1 class="chartheader"> PIZZA TERJUAL BULANAN</h1>
                     <div id="chartContainer6" class="chart-container">
                     <canvas id="salesChart6"></canvas>
                     </div>
                     </div>
                     <div class="cardlarge">
+                    <h1 class="chartheader"> PENJUALAN PIZZA SESUAI NAMA </h1>
                     <div id="chartContainer2" class="chart-container">
                     <canvas id="salesChart2"></canvas>
                     </div>
                     </div>
-            </div>
+                </content>
     
 
-            <div class="section3">
+            <content class="section3">
                 <div class="cardmedium">
+                    <h1 class="chartheader"> PENJUALAN PIZZA SESUAI KATEGORI </h1>
                     <div id="chartContainer1" class="chart-container">
                     <canvas id="salesChart1"></canvas>
                     </div>
                 </div>
 
                 <div class="cardmedium">
+                    <h1 class="chartheader"> PENJUALAN PIZZA SESUAI UKURAN </h1>
                     <div id="chartContainer3" class="chart-container">
                     <canvas id="salesChart3"></canvas>
                     </div>
                 </div>
-            </div>
+            </content>
         </div>
     </section>
 
@@ -121,19 +127,17 @@
     </section>
 
     <div class="sectiontitle" id="findings">
-        <h1>FINDINGS</h1><br>
-        <h2>after examining the data, here's our findings</h2>
+        <h1>Temuan</h1><br>
+        <h2>Setelah menelaah data yang ada, berikut temuan yang didapat</h2>
     </div>
         
     <article class="slider">
     <div class="slider-container"> 
         <div class="myslide fade">    
-            <div class="h1">
-                <h2>Monthly Sales</h2>
-            </div>
+            <h2 class="sliderheader">Penjualan Bulanan</h2>
             <div class="contentinsight">
                 <img class="img-slider" src="assets/Monthly Sales.png" alt="" >
-                <ul>
+                <ul class="text1">
                     <li> Total transaksi terendah terjadi di bulan September dan transaksi terjadi tertinggi di bulan Juli</li>
                     <li> Penjualan pizza cenderung lebih tinggi di awal tahun (Januari-April) dan akhir tahun (November-Desember).</li>
                     <li> Penjualan pizza cenderung lebih rendah di pertengahan tahun (Mei-Oktober).</li>
@@ -145,12 +149,10 @@
         </div>    
 
         <div class="myslide fade">   
-            <div class="h1">
-                <h2>Monthly Revenue</h2>
-            </div>
+            <h2 class="sliderheader">Pendapatan Bulanan</h2>
             <div class="contentinsight">
                 <img class="img-slider" src="assets/Monthly Revenue.png" alt="" >
-                <ul>
+                <ul class="text1">
                     <li> Total pendapatan terendah terjadi di bulan Oktober sebesar 64.027,6 </li>
                     <li> Total pendapatan tertinggi yaitu 72.557,9 terjadi di bulan Juli</li>
                     <li> Pertumbuhan month on month pendapatan yaitu 7,87%</li>
@@ -160,12 +162,10 @@
         </div>    
 
         <div class="myslide fade">
-            <div class="h1">
-                <h2>Sales By Pizza Type</h2>
-            </div>
+            <h2 class="sliderheader">Penjualan Berdasarkan Tipe</h2>
             <div class="contentinsight">
                 <img class="img-slider" src="assets/Group 26.svg" alt="" >
-                <ul>
+                <ul class="text1">
                     <li> Classic Pizza adalah kategori pizza paling populer</li>
                     <li> Total pendapatan tertinggi yaitu 72.557,9 terjadi di bulan Juli</li>
                     <li> Supreme Pizza dan Veggie Pizza juga populer</li>
@@ -176,12 +176,10 @@
         </div>
 
         <div class="myslide fade">
-            <div class="h1">
-                <h2>Sales By Pizza Name</h2>
-            </div>
+                <h2 class="sliderheader">Penjualan Berdasarkan Nama</h2>
             <div class="contentinsight">
                 <img class="img-slider" src="assets/Group 26.svg" alt="" >
-                <ul>
+                <ul class="text1">
                     <li> The Classic Deluxe Pizza adalah menu pizza paling populer dengan total penjualan tertinggi sebanyak 2.459 pizza sepanjang 12 bulan</li>
                     <li> Supreme Pizza dan Veggie Pizza juga populer</li>
                     <li> 3 Menu pizza dengan kuantitas pembelian tertinggi yaitu The Classic Deluxe Pizza, The Hawaiian Pizza dan The Pepperoni Pizza berasal dari pizza kategori classic</li>
@@ -190,12 +188,10 @@
         </div>
     
         <div class="myslide fade">
-            <div class="h1">
-                <h2>Sales By Pizza Size</h2>
-            </div>
+                <h2 class="sliderheader">Penjualan Berdasarkan Ukuran</h2>
             <div class="contentinsight">
                 <img class="img-slider" src="assets/Sales by size.png" alt="" >
-                <ul>
+                <ul class="text1">
                     <li> Pizza ukuran XXL menjadi penjualan terendah dalam 12 bulan sejumlah 0 dari total keseluruhan penjualan size XXL selama satu tahun yaitu 28</li>
                     <li> Penjualan tertinggi secara 12 bulan berturut-turut: ukuran L sejumlah 1.697 dari total keseluruhan penjualan size L selama satu tahun yaitu 18.526</li>
                 </ul>
@@ -222,19 +218,17 @@
 
 
     <div class="sectiontitle" id="recomendation">
-        <h1>RECOMMENDATION</h1>
-        <h2>after examining the insight, here's our recommendation</h2>
+        <h1>REKOMENDASI</h1>
+        <h2>Dari penemuan diatas, berikut solusi yang kami bentuk</h2>
     </div>
             
     <div class="slider">
     <div class="slider-container">  
         <div class="myslideRec fade">
-            <div class="h1">
-                <h2>Menu Change</h2>
-            </div>
+            <h2 class="sliderheader">Perubahan Menu</h2>
             <div class="contentinsight">
                 <img class="img-slider" src="assets/pizza menu change.png" alt="" >
-                <ul>
+                <ul class="text1">
                     <li> Membuat menu baru dengan ukuran besar menggunakan bahan-bahan dalam 5 jenis pizza teratas (Chicken, Mozarella) untuk mencapai minimal target penjualan sebesar 24,60% dan lebih banyak pendapatan</li>
                     <li> Menghapus pizza penjualan terendah (Brie Carre) untuk efisiensi atas kehilangan pendapatan sebesar 11.588,50 yang masih ditutupi oleh total pendapatan minimum</li>
                     <li> Membuat strategi untuk meningkatkan penjualan The Greek Pizza, terutama ukuran XXL yakni menggabungkannya dengan pizza yang sering terjual seperti Pizza Pepperoni yang memiliki biaya produksi rendah namun tetap menarik pelanggan</li>
@@ -243,12 +237,10 @@
         </div>
 
         <div class="myslideRec fade">
-            <div class="h1">
-                <h2>Marketing</h2>
-            </div>
+            <h2 class="sliderheader">Penjualan</h2>
             <div class="contentinsight">
                 <img class="img-slider" src="assets/Marketing.png" alt="" >
-                <ul>
+                <ul class="text1">
                     <li> Mendorong penjualan jenis pizza tertinggi untuk mencapai minimal 5% target penjualan lebih tinggi dari tahun lalu sebesar 76,40% dan pendapatan minimum sebesar 112,63%</li>
                     <li> Meningkatkan teknik pemasaran untuk 10 nama pizza terbaik diantara hari 1 - 20 setiap bulan untuk memastikan target penjualan tercapai</li>
                     <li> Membatasi kuota pizza per hari pada hari 21 - 31 dengan diskon khusus untuk meningkatkan penjualan</li>
@@ -275,7 +267,6 @@
 
     <!--About Us Section-->
     
-<article class="article">
     <section class="about-us" id="about-us">
         <div class="center">
             <h1>SURABAYA 22 TEAM</h1>
@@ -418,7 +409,6 @@
     <br>
     <br>
     <br>
-</article>
     <!--Our Project Section-->
     <section class="project">
         <div class="center">
@@ -426,12 +416,12 @@
         </div>
         <div class="project-content">
             <div class="projectbox">
-                <img src="assets/Data Analytics.jpg" alt="">
+                <img class="imgproject" src="assets/Data Analytics.jpg" alt="">
                 <h2>Data Analytics <br>Capstone project</h2>
                 <a href="https://lookerstudio.google.com/reporting/daedb92d-36a4-4025-afa1-16f842af225f" target="_blank" class="btn">See More</a>
             </div>
             <div class="projectbox">
-                <img src="assets/Software Engineering.svg" alt="">
+                <img class="imgproject" src="assets/Software Engineering.svg" alt="">
                 <h2>Software Engineering <br>Capstone Project</h2>
                 <a href="https://github.com/Kampus-Merdeka-Software-Engineering/km-feb24-surabaya-22" target="_blank" class="btn">See More</a>
             </div>
@@ -453,9 +443,9 @@
     </div>
     <div class="action-buttons">
         <a href="#home" class="btn">Home</a>
-        <a href="#findings" class="btn">Insight</a>
-        <a href="#recomendation" class="btn">Recommendation</a>
-        <a href="#about-us" class="btn">About</a>
+        <a href="#findings" class="btn">Temuan</a>
+        <a href="#recomendation" class="btn">Rekomendasi</a>
+        <a href="#about-us" class="btn">Tentang Tim</a>
     </div>
     </div>
     </footer>
