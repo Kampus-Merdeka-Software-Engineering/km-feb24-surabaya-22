@@ -1,6 +1,6 @@
-# TIM 22, KETUANYA SENDI SENGGOL DONG MUAHAHAHA
+# TIM 22 SURABAYA
 Thanks kepada semua anggota yang sudah berkontribusi hingga sejauh ini<br />
-Sukses terus guys :kissing_heart::yum:
+Sukses terus guys
 
 Link Deploy Vercel:
 [Vercel](https://team-22-surabaya-feb-24.vercel.app/)
