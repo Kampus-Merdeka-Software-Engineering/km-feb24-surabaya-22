@@ -576,7 +576,7 @@ myslideRec[counterRec - 1].style.display = "block";
 dotRec[counterRec - 1].className += " active";
 }
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener('DOMContentLoaded', function() {
     // Get the modal
     var modal = document.getElementById("myModal");
 
@@ -711,30 +711,15 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
 
-    document.addEventListener( function() {
-        // Get all the anchor links in the header navigation
-        const links = document.querySelectorAll('.header-right a');
-    
-        // Add a click event listener to each link
-        links.forEach(link => {
-            link.addEventListener('click', function(event) {
-                // Prevent the default anchor behavior
-                event.preventDefault();
-    
-                // Get the target element's ID from the href attribute
-                const targetId = this.getAttribute('href').substring(1);
-    
-                // Get the target element by ID
-                const targetElement = document.getElementById(targetId);
-    
-                // Scroll to the target element smoothly
-                targetElement.scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
+    document.querySelectorAll('.header-right a').forEach(link => {
+        link.addEventListener('click', function(event) {
+            event.preventDefault();
+            const targetId = this.getAttribute('href').substring(1);
+            const targetElement = document.getElementById(targetId);
+            targetElement.scrollIntoView({ behavior: 'smooth' });
         });
     });
-    
+
 });
 
 
